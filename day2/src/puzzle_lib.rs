@@ -55,8 +55,9 @@ impl Round {
     pub fn build_from_strat_line(strat_line: &str) -> Result<Round, &'static str> {
         let v: Vec<&str> = strat_line.split_whitespace().collect();
 
-        let o_choice = Round::letter_to_shape(v[0]);
-        let m_choice = Round::letter_to_shape(v[1]);
+        let o_choice = Round::letter_to_shape(v[0].clone());
+        let o2_choice = Round::letter_to_shape(v[0].clone());
+        let m_choice = Round::result_to_shape(v[1], o2_choice);
 
         Round::build(o_choice, m_choice)
     }
@@ -78,10 +79,38 @@ impl Round {
             "A" => return Shape::ROCK,
             "B" => return Shape::PAPER,
             "C" => return Shape::SCISSORS,
-            "X" => return Shape::ROCK,
-            "Y" => return Shape::PAPER,
-            "Z" => return Shape::SCISSORS,
             _ => panic!("Unknown shape code"),
+        }
+    }
+
+    fn result_to_shape(letter_code: &str, op_shape: Shape) -> Shape {
+        match letter_code {
+            // Loose
+            "X" => {
+                match op_shape {
+                    Shape::ROCK => return Shape::SCISSORS,
+                    Shape::PAPER => return Shape::ROCK,
+                    Shape::SCISSORS => return Shape::PAPER,
+                }
+            },
+            // draw
+            "Y" => {
+                match op_shape {
+                    Shape::ROCK => return Shape::ROCK,
+                    Shape::PAPER => return Shape::PAPER,
+                    Shape::SCISSORS => return Shape::SCISSORS,
+                }
+
+            },
+            // win
+            "Z" => {
+                match op_shape {
+                    Shape::ROCK => return Shape::PAPER,
+                    Shape::PAPER => return Shape::SCISSORS,
+                    Shape::SCISSORS => return Shape::ROCK,
+                }
+            },
+            _ => panic!("Invalid win loss code letter")
         }
     }
 
