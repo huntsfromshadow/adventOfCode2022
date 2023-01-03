@@ -10,6 +10,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     //println!("Contents {contents}");
 
     let mut elfs: Vec<Elf> = Vec::new();
+    let mut cals_only: Vec<i32> = Vec::new();
 
     let lines = contents.lines();
     let mut idn = 1;
@@ -21,6 +22,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
     for s in lines {
         if s == "" {
+            cals_only.push(tmp_elf.total_calories);
             elfs.push(tmp_elf);
             idn = idn + 1;
             tmp_elf = Elf{
@@ -45,6 +47,10 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     }
 
     println!("Highest Calorie Elf #{}, Total Cals {}", high_id, high_calorie);
+
+    cals_only.sort();
+    cals_only.reverse();
+    println!("Highest top 3 total: {}", cals_only[0] + cals_only[1] + cals_only[2]);
 
 
     Ok(())
