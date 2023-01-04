@@ -15,7 +15,8 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
     //println!("{:#?}", teams);
 
-    let res = teams.into_iter().map(|tm| { return tm.has_full_overlap(); } ).collect::<Vec<bool>>();
+    //let res = teams.into_iter().map(|tm| { return tm.has_full_overlap(); } ).collect::<Vec<bool>>();
+    let res = teams.into_iter().map(|tm| { return tm.has_any_overlap(); } ).collect::<Vec<bool>>();
     println!("{:?}", res);
 
     println!("\nTotal Overlap Teams: {}", res.into_iter().filter(|t| *t == true).collect::<Vec<bool>>().len() );
@@ -88,6 +89,10 @@ impl Team {
     fn has_full_overlap(&self) -> bool {
         self.e1.fully_contain_other(&self.e2) || self.e2.fully_contain_other(&self.e1)
     }
+
+    fn has_any_overlap(&self) -> bool {
+        self.e1.has_any_overlap_with(&self.e2)
+    }
 }
 
 
@@ -114,6 +119,14 @@ impl Elf {
         let high_contained = self.high_sec >= e.high_sec;
 
         low_contained && high_contained
+    }
+
+    fn has_any_overlap_with(&self, e: &Elf) -> bool {
+        println!("My: ({} - {}), Other: ({} - {})", self.low_sec, self.high_sec, e.low_sec, e.high_sec);
+        let d1 = self.low_sec <= e.high_sec;
+        let d2 = self.high_sec >= e.low_sec;
+
+        d1 && d2
     }
 }
 
