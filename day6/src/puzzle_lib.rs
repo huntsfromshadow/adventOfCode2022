@@ -12,7 +12,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let mut start_win: usize = 0;
     loop {
         println!("-------");
-        let v = extract_chars_and_check(&contents, start_win, 4);
+        let v = extract_chars_and_check(&contents, start_win, 14);
         if v == true {
             println!("Yep we have hit it");
             break;
@@ -21,7 +21,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
         }
     }
 
-    println!("Final Spot: {}", start_win + 4);
+    println!("Final Spot: {}", start_win + 14);
 
     Ok(())
 }
