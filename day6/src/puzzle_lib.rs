@@ -1,22 +1,47 @@
 use std::error::Error;
 use std::fs;
 use day6::Config;
+use std::collections::HashSet;
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     println!("FilePath: {}", config.file_path);
 
     let contents = fs::read_to_string(config.file_path)?;
-
-    let cnt = contents.chars().count();
-    dbg!(cnt);
-
     
+    // start point
+    let mut start_win: usize = 0;
+    loop {
+        println!("-------");
+        let v = extract_chars_and_check(&contents, start_win, 4);
+        if v == true {
+            println!("Yep we have hit it");
+            break;
+        } else {            
+            start_win = start_win + 1;    
+        }
+    }
 
-    //let (stacks, instructions) = load_data(contents);
-
-    //process(stacks, instructions);
+    println!("Final Spot: {}", start_win + 4);
 
     Ok(())
+}
+
+fn extract_chars_and_check(s: &String, start: usize, length: usize) -> bool {
+    let ns = s.clone();
+    let e = start + length;
+    
+    let mut hs: HashSet<char> = HashSet::new();
+    let c = &ns[start..e];
+    c.chars().for_each(|x| { 
+        println!("Adding {}", x);
+        hs.insert(x.clone());
+    });
+
+    if hs.len() < length {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 /*
