@@ -18,12 +18,24 @@ fn process(mut stacks: Vec<VecDeque<char>>, instructions: Vec<Instruction>) {
     //println!("{:?}", stacks);
 
     for i in instructions {
-        for _ in 0..i.count {
-            let d = (stacks[(i.start_stack - 1) as usize]).pop_front();
-            // println!("Got {}", d.unwrap());
-            stacks[(i.end_stack - 1) as usize].push_front(d.unwrap());
+        // Pull the specific boxes
+        let mut holder: VecDeque<char> = VecDeque::new();
 
-            // println!("{:?}", stacks);
+        println!("Instruction {:?}", i);
+
+        for _ in 0..i.count {
+            let d = (stacks[(i.start_stack - 1) as usize]).pop_front().unwrap();
+            holder.push_front(d);
+        }
+        println!("Holder: {:?}", holder);
+
+        for _ in 0..holder.len() {
+            let d = holder.pop_front().unwrap();
+            println!("D is {}", d);
+
+            stacks[(i.end_stack - 1) as usize].push_front(d);
+
+             println!("{:?}", stacks);
         }
 
     }
