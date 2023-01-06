@@ -14,9 +14,9 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let grid = setup_grid(contents.lines());
 
     dbg!(&grid);
+    
+    println!("High Scenic {}", grid.get_hightest_scenic());
 
-    let cnt = grid.count_visible().clone();
-    println!("Visible Trees: {}", cnt );
 
     Ok(())
 }
@@ -45,14 +45,16 @@ fn setup_grid(ls: Lines) -> Grid {
 struct Grid {
     total_rows: usize,
     total_cols: usize,
-    grid: HashMap<(usize, usize),u32>
+    grid: HashMap<(usize, usize),u32>,
+    use_scenic_dbg: bool
 }
 impl Grid {
     fn build() -> Grid {
         Grid {
             total_cols: 0,
             total_rows: 0,
-            grid: HashMap::new()
+            grid: HashMap::new(),
+            use_scenic_dbg: true,
         }
     }
 
@@ -72,6 +74,99 @@ impl Grid {
         *self.grid.get(&(row, col)).unwrap()
     }
 
+    fn get_hightest_scenic(&self) -> u32 {
+        let mut high: u32 = 0;
+
+        for r in 0..(self.total_rows) {
+            for c in 0..(self.total_cols) {
+                let v = self.scenic_view(r, c);
+                if v > high {
+                    high = v;
+                }
+            }
+        }
+        high
+    }
+
+    fn scenic_view(&self, row: usize, col: usize) -> u32 {        
+        let height = self.get_height(row,col);
+        let up_s = self.check_scenic_up(row, col, height);
+        let left_s = self.check_scenic_left(row, col, height);
+        let down_s = self.check_scenic_down(row, col, height);
+        let right_s = self.check_scenic_right(row, col, height);
+
+        up_s * left_s * down_s * right_s
+    }
+
+    fn check_scenic_up(&self, row: usize, col: usize, height: u32) -> u32 {
+        if row == 0 { 0 }
+        else {
+            let lrow = row - 1;
+            let lcol = col;
+
+            let lheight = self.get_height(lrow, lcol);
+            if lheight < height {
+                // View bot block continue ray
+                self.check_scenic_up(lrow, lcol, height) + 1
+            } else {
+                1
+            }
+        }
+    }
+
+    fn check_scenic_left(&self, row: usize, col: usize, height: u32) -> u32 {
+        if col == 0 { 0 }
+        else {
+            let lrow = row;
+            let lcol = col - 1;
+
+            let lheight = self.get_height(lrow, lcol);
+            if lheight < height {
+                // View bot block continue ray
+                self.check_scenic_left(lrow, lcol, height) + 1
+            } else {
+                1
+            }
+        }
+    }
+
+    fn check_scenic_down(&self, row: usize, col: usize, height: u32) -> u32 {
+        if row == self.total_rows - 1 { 0 }
+        else {
+            let lrow = row + 1;
+            let lcol = col;
+
+            let lheight = self.get_height(lrow, lcol);
+            if lheight < height {
+                // View not block continue ray
+                self.check_scenic_down(lrow, lcol, height) + 1
+            } else {
+                // view blocked
+                1
+            }
+        }
+    }
+    
+    fn check_scenic_right(&self, row: usize, col: usize, height: u32) -> u32 {
+        println!("Right {} {}", row, col);
+        if col == self.total_cols - 1 { 0 }
+        else {
+            let lrow = row;
+            let lcol = col + 1;
+            println!("\t -> {} {}", lrow, lcol);
+
+            let lheight = self.get_height(lrow, lcol);
+            if lheight < height {
+                // View not block continue ray
+                self.check_scenic_right(lrow, lcol, height) + 1
+            } else {
+                // view blocked
+                1
+            }
+        }
+    }    
+
+
     fn is_tree_visible(&self, row: usize, col: usize) -> bool {
         if row == 0 { true }
         else if col == 0 { true }
@@ -89,7 +184,7 @@ impl Grid {
         }
     }
 
-    fn count_visible(&self) -> u32 {
+    /*fn count_visible(&self) -> u32 {
         let mut total: u32 = 0;
         for r in 0..(self.total_rows) {
             for c in 0..(self.total_cols) {
@@ -99,7 +194,7 @@ impl Grid {
             }
         }
         total
-    }
+    }*/
 
     fn check_visible_up(&self, row: usize, col: usize, height: u32) -> bool {
         let l_row = row - 1;
@@ -169,9 +264,17 @@ impl fmt::Debug for Grid {
                 let c_str = height.to_string();
                 row_num_str.push_str(&c_str);
 
-                let vis = self.is_tree_visible(r, c);
-                if vis { row_vis.push_str("v"); }
-                else { row_vis.push_str("i"); }
+                if self.use_scenic_dbg {
+                    let val = self.scenic_view(r, c);
+                    let n_str = val.to_string();
+                    row_vis.push_str(&n_str);
+                } else {
+                    let vis = self.is_tree_visible(r, c);
+                    if vis { row_vis.push_str("v"); }
+                    else { row_vis.push_str("i"); }
+                }
+                
+
             }
             out_str.push_str(&row_num_str);
             out_str.push_str("     ");
