@@ -1,7 +1,9 @@
 from __future__ import annotations
 import argparse
-from typing import Tuple
+from typing import Tuple, List, Dict
 from enum import Enum
+
+NUM_KNOTS = 9
 
 parser = argparse.ArgumentParser(description='File to process')
 parser.add_argument('filename')
@@ -15,10 +17,100 @@ total_moves = 0
 
 ##############################
 
+class Rope:
+    head_loc = None
+    knots: List[Location] = []
+    tail_visits: Dict[int, List[tuple]] = {}
+
+    def __init__(self):
+        self.head_loc = Location(0,0)
+        for idx in range(NUM_KNOTS):
+            self.knots.append(Location(0,0))
+            self.tail_visits[idx] = []
+    
+    def move_head(self, direc: str, amt: int):
+        for cnt in range(0, amt):    
+            d = (0,0)
+            if direc == "U":
+                d = (0,1)            
+            elif direc == "L":
+                d = (-1,0)
+            elif direc == "D":
+                d = (0,-1)
+            elif direc == "R":
+                d = (1,0)
+            else:
+                print("No idea what direc is:", direc)
+
+            head_str_sloc = self.head_loc.__repr__()
+            knots_orign_pos = list(map(lambda x: x.__repr__(), self.knots))
+
+            self.head_loc.shift_loc_by_tuple(d)
+            print( f"Head Move {direc} - {cnt} of {amt} -- St {head_str_sloc} -> End {self.head_loc}" )
+
+            for idx in range(NUM_KNOTS):
+                res = self.knot_follow(idx)
+    
+                if(res == TAIL_MOVE.NONE):            
+                    print( f"Tail {idx} - No Move Needed Loc {knots_orign_pos[idx]}")
+                elif(res == TAIL_MOVE.DIAGONAL):
+                    print( f"Tail {idx} - Move Diag St {knots_orign_pos[idx]} -> {self.knots[idx]}")
+                else: 
+                    print( f"Tail {idx} - Move Card St {knots_orign_pos[idx]} -> {self.knots[idx]}")
+
+                if(res != TAIL_MOVE.NONE):
+                    d = self.tail_visits[idx]
+
+                    if (self.knots[idx].x, self.knots[idx].y) not in d:
+                        d.append( (self.knots[idx].x, self.knots[idx].y) )
+
+            #print_grid(self)
+
+
+    def knot_follow(self, idx: int) -> TAIL_MOVE :
+        leader = None
+        follower = self.knots[idx]
+
+        if idx == 0:
+            leader = self.head_loc
+        else:
+            leader = self.knots[idx-1]
+
+        if(leader.is_location_overlap(follower) \
+            or leader.is_location_adjacent(follower)):
+            return TAIL_MOVE.NONE
+    
+        if(leader.is_location_two_away(follower)):
+            if(leader.is_location_two_up(follower)):
+                follower.shift_loc(0, 1)
+            elif(leader.is_location_two_left(follower)):
+                follower.shift_loc(-1, 0)
+            elif(leader.is_location_two_down(follower)):
+                follower.shift_loc(0, -1)
+            else: # It's right
+                follower.shift_loc(1, 0)
+
+            return TAIL_MOVE.CARDINAL
+        else:
+            # diagonal        
+            if( leader.y > follower.y ): #head above tail
+                if( leader.x > follower.x) : # head to right of tail
+                    follower.shift_loc(1,1)
+                else: # head left of tail
+                    follower.shift_loc(-1,1)
+                return TAIL_MOVE.DIAGONAL
+            else: # head is below tail
+                if( leader.x > follower.x) : # head to right of tail
+                    follower.shift_loc(1,-1)
+                else: # head left of tail
+                    follower.shift_loc(-1,-1)
+                return TAIL_MOVE.DIAGONAL
+
 class TAIL_MOVE(Enum):
     NONE = 1
     CARDINAL = 2
     DIAGONAL = 3
+
 
 class Location:
 
@@ -80,90 +172,25 @@ class Location:
             self.is_location_two_right(loc) or \
             self.is_location_two_down(loc) 
 
-def tail_follow() -> TAIL_MOVE :
-    if(head_loc.is_location_overlap(tail_loc) \
-        or head_loc.is_location_adjacent(tail_loc)):
-        return TAIL_MOVE.NONE
-    
-    if(head_loc.is_location_two_away(tail_loc)):
-        if(head_loc.is_location_two_up(tail_loc)):
-            tail_loc.shift_loc(0, 1)
-        elif(head_loc.is_location_two_left(tail_loc)):
-            tail_loc.shift_loc(-1, 0)
-        elif(head_loc.is_location_two_down(tail_loc)):
-            tail_loc.shift_loc(0, -1)
-        else: # It's right
-            tail_loc.shift_loc(1, 0)
-
-        return TAIL_MOVE.CARDINAL
-    else:
-        # diagonal        
-        if( head_loc.y > tail_loc.y ): #head above tail
-            if( head_loc.x > tail_loc.x) : # head to right of tail
-                tail_loc.shift_loc(1,1)
-            else: # head left of tail
-                tail_loc.shift_loc(-1,1)
-            return TAIL_MOVE.DIAGONAL
-        else: # head is below tail
-            if( head_loc.x > tail_loc.x) : # head to right of tail
-                tail_loc.shift_loc(1,-1)
-            else: # head left of tail
-                tail_loc.shift_loc(-1,-1)
-            return TAIL_MOVE.DIAGONAL
-        
-
-def move_head(direc: str, amt: int):
-    
-    for _ in range(0, amt):    
-
-        d = (0,0)
-        if direc == "U":
-            d = (0,1)            
-        elif direc == "L":
-            d = (-1,0)
-        elif direc == "D":
-            d = (0,-1)
-        elif direc == "R":
-            d = (1,0)
-        else:
-            print("No idea what direc is:", direc)
-
-        head_str_sloc = head_loc.__repr__()
-        tail_str_sloc = tail_loc.__repr__()
-
-        head_loc.shift_loc_by_tuple(d)
-        print( f"Head Move {direc} St {head_str_sloc} -> End {head_loc}" )
-
-        res = tail_follow()
-        if(res == TAIL_MOVE.NONE):            
-            print( f"Tail No Move Needed Loc {tail_str_sloc}")
-        elif(res == TAIL_MOVE.DIAGONAL):
-            print( f"Tail Move Diag St {tail_str_sloc} -> {tail_loc}")
-        else: 
-            print( f"Tail Move Card St {tail_str_sloc} -> {tail_loc}")
-
-        if(res != TAIL_MOVE.NONE):
-            if (tail_loc.x, tail_loc.y) not in tail_visits:
-                tail_visits.append( (tail_loc.x, tail_loc.y) )
-
-        #print_grid(head_loc, tail_loc)
-    
-def print_grid(head: Location, tail: Location, only_visit=False):
-    width = 6
-    height = 6
+def print_grid(rope: Rope):
+    width = 10
+    height = 10
 
     cells = {}
 
     for h in range(height-1, -1, -1):
         for w in range(width):
-            if (w,h) in tail_visits:
-                cells[(w,h)] = "#"
-            else:
-                cells[(w,h)] = "."
+            #if (w,h) in tail_visits:
+            #    cells[(w,h)] = "#"
+            #else:
+            cells[(w,h)] = "."
 
-    if not only_visit:
-        cells[(tail.x, tail.y)] = "T"    
-        cells[(head.x, head.y)] = "H"
+    #if not only_visit:
+        
+    for idx in range(NUM_KNOTS-1,-1,-1):
+        cells[(rope.knots[idx].x, rope.knots[idx].y)] = str(idx + 1)
+
+    cells[(rope.head_loc.x, rope.head_loc.y)] = "H"
 
 
 
@@ -178,22 +205,25 @@ def print_grid(head: Location, tail: Location, only_visit=False):
 
 ############################
 
-head_loc = Location(0,0)
-tail_loc = Location(0,0)
-total_moves = 0
-tail_visits = []
+
+rope = Rope()
+
 
 print("Start Grid")
-print_grid(head_loc, tail_loc)
+#print_grid(rope)
 
 for l in lines:
     d = l.split(" ")
-    move_head(d[0], int(d[1]))
-    total_moves = total_moves + int(d[1])
+    rope.move_head(d[0], int(d[1]))
+    #total_moves = total_moves + int(d[1])
+
+print(rope.tail_visits)
+for k,v in rope.tail_visits.items():
+    print(f"Idx: {k} - Visits: {len(v)}")
 
 #print(tail_visits)
-print(f"Total Moves {total_moves}")
-print(f"Visit with start {len(tail_visits)+1}")
+#print(f"Total Moves {total_moves}")
+#print(f"Visit with start {len(tail_visits)+1}")
 
 # print_grid(head_loc, tail_loc, True)
     
