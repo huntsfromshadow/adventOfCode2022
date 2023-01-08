@@ -1,0 +1,788 @@
+Starting
+
+
+FilePath: med_input.txt
+Starting Cycle 1 -- X Reg 1 -- Instr ADDX(15) -- Instr Cycle 2
+Ending Cycle 1 -- X Reg 1
+Need to Load Instruction: idx 0 - inst ADDX(15)
+Starting Cycle 2 -- X Reg 1 -- Instr ADDX(15) -- Instr Cycle 2
+Ending Cycle 2 -- X Reg 1
+Starting Cycle 3 -- X Reg 1 -- Instr ADDX(15) -- Instr Cycle 1
+	ADDX 15
+Ending Cycle 3 -- X Reg 16
+Need to Load Instruction: idx 1 - inst ADDX(-11)
+Starting Cycle 4 -- X Reg 16 -- Instr ADDX(-11) -- Instr Cycle 2
+Ending Cycle 4 -- X Reg 16
+Starting Cycle 5 -- X Reg 16 -- Instr ADDX(-11) -- Instr Cycle 1
+	ADDX -11
+Ending Cycle 5 -- X Reg 5
+Need to Load Instruction: idx 2 - inst ADDX(6)
+Starting Cycle 6 -- X Reg 5 -- Instr ADDX(6) -- Instr Cycle 2
+Ending Cycle 6 -- X Reg 5
+Starting Cycle 7 -- X Reg 5 -- Instr ADDX(6) -- Instr Cycle 1
+	ADDX 6
+Ending Cycle 7 -- X Reg 11
+Need to Load Instruction: idx 3 - inst ADDX(-3)
+Starting Cycle 8 -- X Reg 11 -- Instr ADDX(-3) -- Instr Cycle 2
+Ending Cycle 8 -- X Reg 11
+Starting Cycle 9 -- X Reg 11 -- Instr ADDX(-3) -- Instr Cycle 1
+	ADDX -3
+Ending Cycle 9 -- X Reg 8
+Need to Load Instruction: idx 4 - inst ADDX(5)
+Starting Cycle 10 -- X Reg 8 -- Instr ADDX(5) -- Instr Cycle 2
+Ending Cycle 10 -- X Reg 8
+Starting Cycle 11 -- X Reg 8 -- Instr ADDX(5) -- Instr Cycle 1
+	ADDX 5
+Ending Cycle 11 -- X Reg 13
+Need to Load Instruction: idx 5 - inst ADDX(-1)
+Starting Cycle 12 -- X Reg 13 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 12 -- X Reg 13
+Starting Cycle 13 -- X Reg 13 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 13 -- X Reg 12
+Need to Load Instruction: idx 6 - inst ADDX(-8)
+Starting Cycle 14 -- X Reg 12 -- Instr ADDX(-8) -- Instr Cycle 2
+Ending Cycle 14 -- X Reg 12
+Starting Cycle 15 -- X Reg 12 -- Instr ADDX(-8) -- Instr Cycle 1
+	ADDX -8
+Ending Cycle 15 -- X Reg 4
+Need to Load Instruction: idx 7 - inst ADDX(13)
+Starting Cycle 16 -- X Reg 4 -- Instr ADDX(13) -- Instr Cycle 2
+Ending Cycle 16 -- X Reg 4
+Starting Cycle 17 -- X Reg 4 -- Instr ADDX(13) -- Instr Cycle 1
+	ADDX 13
+Ending Cycle 17 -- X Reg 17
+Need to Load Instruction: idx 8 - inst ADDX(4)
+Starting Cycle 18 -- X Reg 17 -- Instr ADDX(4) -- Instr Cycle 2
+Ending Cycle 18 -- X Reg 17
+Starting Cycle 19 -- X Reg 17 -- Instr ADDX(4) -- Instr Cycle 1
+	ADDX 4
+Ending Cycle 19 -- X Reg 21
+Need to Load Instruction: idx 9 - inst NOOP
+Starting Cycle 20 -- X Reg 21 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 20 -- X Reg 21
+Recording on cnt 20 val 21
+Need to Load Instruction: idx 10 - inst ADDX(-1)
+Starting Cycle 21 -- X Reg 21 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 21 -- X Reg 21
+Starting Cycle 22 -- X Reg 21 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 22 -- X Reg 20
+Need to Load Instruction: idx 11 - inst ADDX(5)
+Starting Cycle 23 -- X Reg 20 -- Instr ADDX(5) -- Instr Cycle 2
+Ending Cycle 23 -- X Reg 20
+Starting Cycle 24 -- X Reg 20 -- Instr ADDX(5) -- Instr Cycle 1
+	ADDX 5
+Ending Cycle 24 -- X Reg 25
+Need to Load Instruction: idx 12 - inst ADDX(-1)
+Starting Cycle 25 -- X Reg 25 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 25 -- X Reg 25
+Starting Cycle 26 -- X Reg 25 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 26 -- X Reg 24
+Need to Load Instruction: idx 13 - inst ADDX(5)
+Starting Cycle 27 -- X Reg 24 -- Instr ADDX(5) -- Instr Cycle 2
+Ending Cycle 27 -- X Reg 24
+Starting Cycle 28 -- X Reg 24 -- Instr ADDX(5) -- Instr Cycle 1
+	ADDX 5
+Ending Cycle 28 -- X Reg 29
+Need to Load Instruction: idx 14 - inst ADDX(-1)
+Starting Cycle 29 -- X Reg 29 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 29 -- X Reg 29
+Starting Cycle 30 -- X Reg 29 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 30 -- X Reg 28
+Need to Load Instruction: idx 15 - inst ADDX(5)
+Starting Cycle 31 -- X Reg 28 -- Instr ADDX(5) -- Instr Cycle 2
+Ending Cycle 31 -- X Reg 28
+Starting Cycle 32 -- X Reg 28 -- Instr ADDX(5) -- Instr Cycle 1
+	ADDX 5
+Ending Cycle 32 -- X Reg 33
+Need to Load Instruction: idx 16 - inst ADDX(-1)
+Starting Cycle 33 -- X Reg 33 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 33 -- X Reg 33
+Starting Cycle 34 -- X Reg 33 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 34 -- X Reg 32
+Need to Load Instruction: idx 17 - inst ADDX(5)
+Starting Cycle 35 -- X Reg 32 -- Instr ADDX(5) -- Instr Cycle 2
+Ending Cycle 35 -- X Reg 32
+Starting Cycle 36 -- X Reg 32 -- Instr ADDX(5) -- Instr Cycle 1
+	ADDX 5
+Ending Cycle 36 -- X Reg 37
+Need to Load Instruction: idx 18 - inst ADDX(-1)
+Starting Cycle 37 -- X Reg 37 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 37 -- X Reg 37
+Starting Cycle 38 -- X Reg 37 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 38 -- X Reg 36
+Need to Load Instruction: idx 19 - inst ADDX(-35)
+Starting Cycle 39 -- X Reg 36 -- Instr ADDX(-35) -- Instr Cycle 2
+Ending Cycle 39 -- X Reg 36
+Starting Cycle 40 -- X Reg 36 -- Instr ADDX(-35) -- Instr Cycle 1
+	ADDX -35
+Ending Cycle 40 -- X Reg 1
+Need to Load Instruction: idx 20 - inst ADDX(1)
+Starting Cycle 41 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 41 -- X Reg 1
+Starting Cycle 42 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 42 -- X Reg 2
+Need to Load Instruction: idx 21 - inst ADDX(24)
+Starting Cycle 43 -- X Reg 2 -- Instr ADDX(24) -- Instr Cycle 2
+Ending Cycle 43 -- X Reg 2
+Starting Cycle 44 -- X Reg 2 -- Instr ADDX(24) -- Instr Cycle 1
+	ADDX 24
+Ending Cycle 44 -- X Reg 26
+Need to Load Instruction: idx 22 - inst ADDX(-19)
+Starting Cycle 45 -- X Reg 26 -- Instr ADDX(-19) -- Instr Cycle 2
+Ending Cycle 45 -- X Reg 26
+Starting Cycle 46 -- X Reg 26 -- Instr ADDX(-19) -- Instr Cycle 1
+	ADDX -19
+Ending Cycle 46 -- X Reg 7
+Need to Load Instruction: idx 23 - inst ADDX(1)
+Starting Cycle 47 -- X Reg 7 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 47 -- X Reg 7
+Starting Cycle 48 -- X Reg 7 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 48 -- X Reg 8
+Need to Load Instruction: idx 24 - inst ADDX(16)
+Starting Cycle 49 -- X Reg 8 -- Instr ADDX(16) -- Instr Cycle 2
+Ending Cycle 49 -- X Reg 8
+Starting Cycle 50 -- X Reg 8 -- Instr ADDX(16) -- Instr Cycle 1
+	ADDX 16
+Ending Cycle 50 -- X Reg 24
+Need to Load Instruction: idx 25 - inst ADDX(-11)
+Starting Cycle 51 -- X Reg 24 -- Instr ADDX(-11) -- Instr Cycle 2
+Ending Cycle 51 -- X Reg 24
+Starting Cycle 52 -- X Reg 24 -- Instr ADDX(-11) -- Instr Cycle 1
+	ADDX -11
+Ending Cycle 52 -- X Reg 13
+Need to Load Instruction: idx 26 - inst NOOP
+Starting Cycle 53 -- X Reg 13 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 53 -- X Reg 13
+Need to Load Instruction: idx 27 - inst NOOP
+Starting Cycle 54 -- X Reg 13 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 54 -- X Reg 13
+Need to Load Instruction: idx 28 - inst ADDX(21)
+Starting Cycle 55 -- X Reg 13 -- Instr ADDX(21) -- Instr Cycle 2
+Ending Cycle 55 -- X Reg 13
+Starting Cycle 56 -- X Reg 13 -- Instr ADDX(21) -- Instr Cycle 1
+	ADDX 21
+Ending Cycle 56 -- X Reg 34
+Need to Load Instruction: idx 29 - inst ADDX(-15)
+Starting Cycle 57 -- X Reg 34 -- Instr ADDX(-15) -- Instr Cycle 2
+Ending Cycle 57 -- X Reg 34
+Starting Cycle 58 -- X Reg 34 -- Instr ADDX(-15) -- Instr Cycle 1
+	ADDX -15
+Ending Cycle 58 -- X Reg 19
+Need to Load Instruction: idx 30 - inst NOOP
+Starting Cycle 59 -- X Reg 19 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 59 -- X Reg 19
+Need to Load Instruction: idx 31 - inst NOOP
+Starting Cycle 60 -- X Reg 19 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 60 -- X Reg 19
+Recording on cnt 60 val 19
+Need to Load Instruction: idx 32 - inst ADDX(-3)
+Starting Cycle 61 -- X Reg 19 -- Instr ADDX(-3) -- Instr Cycle 2
+Ending Cycle 61 -- X Reg 19
+Starting Cycle 62 -- X Reg 19 -- Instr ADDX(-3) -- Instr Cycle 1
+	ADDX -3
+Ending Cycle 62 -- X Reg 16
+Need to Load Instruction: idx 33 - inst ADDX(9)
+Starting Cycle 63 -- X Reg 16 -- Instr ADDX(9) -- Instr Cycle 2
+Ending Cycle 63 -- X Reg 16
+Starting Cycle 64 -- X Reg 16 -- Instr ADDX(9) -- Instr Cycle 1
+	ADDX 9
+Ending Cycle 64 -- X Reg 25
+Need to Load Instruction: idx 34 - inst ADDX(1)
+Starting Cycle 65 -- X Reg 25 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 65 -- X Reg 25
+Starting Cycle 66 -- X Reg 25 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 66 -- X Reg 26
+Need to Load Instruction: idx 35 - inst ADDX(-3)
+Starting Cycle 67 -- X Reg 26 -- Instr ADDX(-3) -- Instr Cycle 2
+Ending Cycle 67 -- X Reg 26
+Starting Cycle 68 -- X Reg 26 -- Instr ADDX(-3) -- Instr Cycle 1
+	ADDX -3
+Ending Cycle 68 -- X Reg 23
+Need to Load Instruction: idx 36 - inst ADDX(8)
+Starting Cycle 69 -- X Reg 23 -- Instr ADDX(8) -- Instr Cycle 2
+Ending Cycle 69 -- X Reg 23
+Starting Cycle 70 -- X Reg 23 -- Instr ADDX(8) -- Instr Cycle 1
+	ADDX 8
+Ending Cycle 70 -- X Reg 31
+Need to Load Instruction: idx 37 - inst ADDX(1)
+Starting Cycle 71 -- X Reg 31 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 71 -- X Reg 31
+Starting Cycle 72 -- X Reg 31 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 72 -- X Reg 32
+Need to Load Instruction: idx 38 - inst ADDX(5)
+Starting Cycle 73 -- X Reg 32 -- Instr ADDX(5) -- Instr Cycle 2
+Ending Cycle 73 -- X Reg 32
+Starting Cycle 74 -- X Reg 32 -- Instr ADDX(5) -- Instr Cycle 1
+	ADDX 5
+Ending Cycle 74 -- X Reg 37
+Need to Load Instruction: idx 39 - inst NOOP
+Starting Cycle 75 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 75 -- X Reg 37
+Need to Load Instruction: idx 40 - inst NOOP
+Starting Cycle 76 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 76 -- X Reg 37
+Need to Load Instruction: idx 41 - inst NOOP
+Starting Cycle 77 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 77 -- X Reg 37
+Need to Load Instruction: idx 42 - inst NOOP
+Starting Cycle 78 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 78 -- X Reg 37
+Need to Load Instruction: idx 43 - inst NOOP
+Starting Cycle 79 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 79 -- X Reg 37
+Need to Load Instruction: idx 44 - inst ADDX(-36)
+Starting Cycle 80 -- X Reg 37 -- Instr ADDX(-36) -- Instr Cycle 2
+Ending Cycle 80 -- X Reg 37
+Starting Cycle 81 -- X Reg 37 -- Instr ADDX(-36) -- Instr Cycle 1
+	ADDX -36
+Ending Cycle 81 -- X Reg 1
+Need to Load Instruction: idx 45 - inst NOOP
+Starting Cycle 82 -- X Reg 1 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 82 -- X Reg 1
+Need to Load Instruction: idx 46 - inst ADDX(1)
+Starting Cycle 83 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 83 -- X Reg 1
+Starting Cycle 84 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 84 -- X Reg 2
+Need to Load Instruction: idx 47 - inst ADDX(7)
+Starting Cycle 85 -- X Reg 2 -- Instr ADDX(7) -- Instr Cycle 2
+Ending Cycle 85 -- X Reg 2
+Starting Cycle 86 -- X Reg 2 -- Instr ADDX(7) -- Instr Cycle 1
+	ADDX 7
+Ending Cycle 86 -- X Reg 9
+Need to Load Instruction: idx 48 - inst NOOP
+Starting Cycle 87 -- X Reg 9 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 87 -- X Reg 9
+Need to Load Instruction: idx 49 - inst NOOP
+Starting Cycle 88 -- X Reg 9 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 88 -- X Reg 9
+Need to Load Instruction: idx 50 - inst NOOP
+Starting Cycle 89 -- X Reg 9 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 89 -- X Reg 9
+Need to Load Instruction: idx 51 - inst ADDX(2)
+Starting Cycle 90 -- X Reg 9 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 90 -- X Reg 9
+Starting Cycle 91 -- X Reg 9 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 91 -- X Reg 11
+Need to Load Instruction: idx 52 - inst ADDX(6)
+Starting Cycle 92 -- X Reg 11 -- Instr ADDX(6) -- Instr Cycle 2
+Ending Cycle 92 -- X Reg 11
+Starting Cycle 93 -- X Reg 11 -- Instr ADDX(6) -- Instr Cycle 1
+	ADDX 6
+Ending Cycle 93 -- X Reg 17
+Need to Load Instruction: idx 53 - inst NOOP
+Starting Cycle 94 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 94 -- X Reg 17
+Need to Load Instruction: idx 54 - inst NOOP
+Starting Cycle 95 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 95 -- X Reg 17
+Need to Load Instruction: idx 55 - inst NOOP
+Starting Cycle 96 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 96 -- X Reg 17
+Need to Load Instruction: idx 56 - inst NOOP
+Starting Cycle 97 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 97 -- X Reg 17
+Need to Load Instruction: idx 57 - inst NOOP
+Starting Cycle 98 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 98 -- X Reg 17
+Need to Load Instruction: idx 58 - inst ADDX(1)
+Starting Cycle 99 -- X Reg 17 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 99 -- X Reg 17
+Starting Cycle 100 -- X Reg 17 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 100 -- X Reg 18
+Recording on cnt 100 val 18
+Need to Load Instruction: idx 59 - inst NOOP
+Starting Cycle 101 -- X Reg 18 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 101 -- X Reg 18
+Need to Load Instruction: idx 60 - inst NOOP
+Starting Cycle 102 -- X Reg 18 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 102 -- X Reg 18
+Need to Load Instruction: idx 61 - inst ADDX(7)
+Starting Cycle 103 -- X Reg 18 -- Instr ADDX(7) -- Instr Cycle 2
+Ending Cycle 103 -- X Reg 18
+Starting Cycle 104 -- X Reg 18 -- Instr ADDX(7) -- Instr Cycle 1
+	ADDX 7
+Ending Cycle 104 -- X Reg 25
+Need to Load Instruction: idx 62 - inst ADDX(1)
+Starting Cycle 105 -- X Reg 25 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 105 -- X Reg 25
+Starting Cycle 106 -- X Reg 25 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 106 -- X Reg 26
+Need to Load Instruction: idx 63 - inst NOOP
+Starting Cycle 107 -- X Reg 26 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 107 -- X Reg 26
+Need to Load Instruction: idx 64 - inst ADDX(-13)
+Starting Cycle 108 -- X Reg 26 -- Instr ADDX(-13) -- Instr Cycle 2
+Ending Cycle 108 -- X Reg 26
+Starting Cycle 109 -- X Reg 26 -- Instr ADDX(-13) -- Instr Cycle 1
+	ADDX -13
+Ending Cycle 109 -- X Reg 13
+Need to Load Instruction: idx 65 - inst ADDX(13)
+Starting Cycle 110 -- X Reg 13 -- Instr ADDX(13) -- Instr Cycle 2
+Ending Cycle 110 -- X Reg 13
+Starting Cycle 111 -- X Reg 13 -- Instr ADDX(13) -- Instr Cycle 1
+	ADDX 13
+Ending Cycle 111 -- X Reg 26
+Need to Load Instruction: idx 66 - inst ADDX(7)
+Starting Cycle 112 -- X Reg 26 -- Instr ADDX(7) -- Instr Cycle 2
+Ending Cycle 112 -- X Reg 26
+Starting Cycle 113 -- X Reg 26 -- Instr ADDX(7) -- Instr Cycle 1
+	ADDX 7
+Ending Cycle 113 -- X Reg 33
+Need to Load Instruction: idx 67 - inst NOOP
+Starting Cycle 114 -- X Reg 33 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 114 -- X Reg 33
+Need to Load Instruction: idx 68 - inst ADDX(1)
+Starting Cycle 115 -- X Reg 33 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 115 -- X Reg 33
+Starting Cycle 116 -- X Reg 33 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 116 -- X Reg 34
+Need to Load Instruction: idx 69 - inst ADDX(-33)
+Starting Cycle 117 -- X Reg 34 -- Instr ADDX(-33) -- Instr Cycle 2
+Ending Cycle 117 -- X Reg 34
+Starting Cycle 118 -- X Reg 34 -- Instr ADDX(-33) -- Instr Cycle 1
+	ADDX -33
+Ending Cycle 118 -- X Reg 1
+Need to Load Instruction: idx 70 - inst NOOP
+Starting Cycle 119 -- X Reg 1 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 119 -- X Reg 1
+Need to Load Instruction: idx 71 - inst NOOP
+Starting Cycle 120 -- X Reg 1 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 120 -- X Reg 1
+Need to Load Instruction: idx 72 - inst NOOP
+Starting Cycle 121 -- X Reg 1 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 121 -- X Reg 1
+Need to Load Instruction: idx 73 - inst ADDX(2)
+Starting Cycle 122 -- X Reg 1 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 122 -- X Reg 1
+Starting Cycle 123 -- X Reg 1 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 123 -- X Reg 3
+Need to Load Instruction: idx 74 - inst NOOP
+Starting Cycle 124 -- X Reg 3 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 124 -- X Reg 3
+Need to Load Instruction: idx 75 - inst NOOP
+Starting Cycle 125 -- X Reg 3 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 125 -- X Reg 3
+Need to Load Instruction: idx 76 - inst NOOP
+Starting Cycle 126 -- X Reg 3 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 126 -- X Reg 3
+Need to Load Instruction: idx 77 - inst ADDX(8)
+Starting Cycle 127 -- X Reg 3 -- Instr ADDX(8) -- Instr Cycle 2
+Ending Cycle 127 -- X Reg 3
+Starting Cycle 128 -- X Reg 3 -- Instr ADDX(8) -- Instr Cycle 1
+	ADDX 8
+Ending Cycle 128 -- X Reg 11
+Need to Load Instruction: idx 78 - inst NOOP
+Starting Cycle 129 -- X Reg 11 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 129 -- X Reg 11
+Need to Load Instruction: idx 79 - inst ADDX(-1)
+Starting Cycle 130 -- X Reg 11 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 130 -- X Reg 11
+Starting Cycle 131 -- X Reg 11 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 131 -- X Reg 10
+Need to Load Instruction: idx 80 - inst ADDX(2)
+Starting Cycle 132 -- X Reg 10 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 132 -- X Reg 10
+Starting Cycle 133 -- X Reg 10 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 133 -- X Reg 12
+Need to Load Instruction: idx 81 - inst ADDX(1)
+Starting Cycle 134 -- X Reg 12 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 134 -- X Reg 12
+Starting Cycle 135 -- X Reg 12 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 135 -- X Reg 13
+Need to Load Instruction: idx 82 - inst NOOP
+Starting Cycle 136 -- X Reg 13 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 136 -- X Reg 13
+Need to Load Instruction: idx 83 - inst ADDX(17)
+Starting Cycle 137 -- X Reg 13 -- Instr ADDX(17) -- Instr Cycle 2
+Ending Cycle 137 -- X Reg 13
+Starting Cycle 138 -- X Reg 13 -- Instr ADDX(17) -- Instr Cycle 1
+	ADDX 17
+Ending Cycle 138 -- X Reg 30
+Need to Load Instruction: idx 84 - inst ADDX(-9)
+Starting Cycle 139 -- X Reg 30 -- Instr ADDX(-9) -- Instr Cycle 2
+Ending Cycle 139 -- X Reg 30
+Starting Cycle 140 -- X Reg 30 -- Instr ADDX(-9) -- Instr Cycle 1
+	ADDX -9
+Ending Cycle 140 -- X Reg 21
+Recording on cnt 140 val 21
+Need to Load Instruction: idx 85 - inst ADDX(1)
+Starting Cycle 141 -- X Reg 21 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 141 -- X Reg 21
+Starting Cycle 142 -- X Reg 21 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 142 -- X Reg 22
+Need to Load Instruction: idx 86 - inst ADDX(1)
+Starting Cycle 143 -- X Reg 22 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 143 -- X Reg 22
+Starting Cycle 144 -- X Reg 22 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 144 -- X Reg 23
+Need to Load Instruction: idx 87 - inst ADDX(-3)
+Starting Cycle 145 -- X Reg 23 -- Instr ADDX(-3) -- Instr Cycle 2
+Ending Cycle 145 -- X Reg 23
+Starting Cycle 146 -- X Reg 23 -- Instr ADDX(-3) -- Instr Cycle 1
+	ADDX -3
+Ending Cycle 146 -- X Reg 20
+Need to Load Instruction: idx 88 - inst ADDX(11)
+Starting Cycle 147 -- X Reg 20 -- Instr ADDX(11) -- Instr Cycle 2
+Ending Cycle 147 -- X Reg 20
+Starting Cycle 148 -- X Reg 20 -- Instr ADDX(11) -- Instr Cycle 1
+	ADDX 11
+Ending Cycle 148 -- X Reg 31
+Need to Load Instruction: idx 89 - inst NOOP
+Starting Cycle 149 -- X Reg 31 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 149 -- X Reg 31
+Need to Load Instruction: idx 90 - inst NOOP
+Starting Cycle 150 -- X Reg 31 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 150 -- X Reg 31
+Need to Load Instruction: idx 91 - inst ADDX(1)
+Starting Cycle 151 -- X Reg 31 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 151 -- X Reg 31
+Starting Cycle 152 -- X Reg 31 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 152 -- X Reg 32
+Need to Load Instruction: idx 92 - inst NOOP
+Starting Cycle 153 -- X Reg 32 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 153 -- X Reg 32
+Need to Load Instruction: idx 93 - inst ADDX(1)
+Starting Cycle 154 -- X Reg 32 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 154 -- X Reg 32
+Starting Cycle 155 -- X Reg 32 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 155 -- X Reg 33
+Need to Load Instruction: idx 94 - inst NOOP
+Starting Cycle 156 -- X Reg 33 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 156 -- X Reg 33
+Need to Load Instruction: idx 95 - inst NOOP
+Starting Cycle 157 -- X Reg 33 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 157 -- X Reg 33
+Need to Load Instruction: idx 96 - inst ADDX(-13)
+Starting Cycle 158 -- X Reg 33 -- Instr ADDX(-13) -- Instr Cycle 2
+Ending Cycle 158 -- X Reg 33
+Starting Cycle 159 -- X Reg 33 -- Instr ADDX(-13) -- Instr Cycle 1
+	ADDX -13
+Ending Cycle 159 -- X Reg 20
+Need to Load Instruction: idx 97 - inst ADDX(-19)
+Starting Cycle 160 -- X Reg 20 -- Instr ADDX(-19) -- Instr Cycle 2
+Ending Cycle 160 -- X Reg 20
+Starting Cycle 161 -- X Reg 20 -- Instr ADDX(-19) -- Instr Cycle 1
+	ADDX -19
+Ending Cycle 161 -- X Reg 1
+Need to Load Instruction: idx 98 - inst ADDX(1)
+Starting Cycle 162 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 162 -- X Reg 1
+Starting Cycle 163 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 163 -- X Reg 2
+Need to Load Instruction: idx 99 - inst ADDX(3)
+Starting Cycle 164 -- X Reg 2 -- Instr ADDX(3) -- Instr Cycle 2
+Ending Cycle 164 -- X Reg 2
+Starting Cycle 165 -- X Reg 2 -- Instr ADDX(3) -- Instr Cycle 1
+	ADDX 3
+Ending Cycle 165 -- X Reg 5
+Need to Load Instruction: idx 100 - inst ADDX(26)
+Starting Cycle 166 -- X Reg 5 -- Instr ADDX(26) -- Instr Cycle 2
+Ending Cycle 166 -- X Reg 5
+Starting Cycle 167 -- X Reg 5 -- Instr ADDX(26) -- Instr Cycle 1
+	ADDX 26
+Ending Cycle 167 -- X Reg 31
+Need to Load Instruction: idx 101 - inst ADDX(-30)
+Starting Cycle 168 -- X Reg 31 -- Instr ADDX(-30) -- Instr Cycle 2
+Ending Cycle 168 -- X Reg 31
+Starting Cycle 169 -- X Reg 31 -- Instr ADDX(-30) -- Instr Cycle 1
+	ADDX -30
+Ending Cycle 169 -- X Reg 1
+Need to Load Instruction: idx 102 - inst ADDX(12)
+Starting Cycle 170 -- X Reg 1 -- Instr ADDX(12) -- Instr Cycle 2
+Ending Cycle 170 -- X Reg 1
+Starting Cycle 171 -- X Reg 1 -- Instr ADDX(12) -- Instr Cycle 1
+	ADDX 12
+Ending Cycle 171 -- X Reg 13
+Need to Load Instruction: idx 103 - inst ADDX(-1)
+Starting Cycle 172 -- X Reg 13 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 172 -- X Reg 13
+Starting Cycle 173 -- X Reg 13 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 173 -- X Reg 12
+Need to Load Instruction: idx 104 - inst ADDX(3)
+Starting Cycle 174 -- X Reg 12 -- Instr ADDX(3) -- Instr Cycle 2
+Ending Cycle 174 -- X Reg 12
+Starting Cycle 175 -- X Reg 12 -- Instr ADDX(3) -- Instr Cycle 1
+	ADDX 3
+Ending Cycle 175 -- X Reg 15
+Need to Load Instruction: idx 105 - inst ADDX(1)
+Starting Cycle 176 -- X Reg 15 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 176 -- X Reg 15
+Starting Cycle 177 -- X Reg 15 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 177 -- X Reg 16
+Need to Load Instruction: idx 106 - inst NOOP
+Starting Cycle 178 -- X Reg 16 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 178 -- X Reg 16
+Need to Load Instruction: idx 107 - inst NOOP
+Starting Cycle 179 -- X Reg 16 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 179 -- X Reg 16
+Need to Load Instruction: idx 108 - inst NOOP
+Starting Cycle 180 -- X Reg 16 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 180 -- X Reg 16
+Recording on cnt 180 val 16
+Need to Load Instruction: idx 109 - inst ADDX(-9)
+Starting Cycle 181 -- X Reg 16 -- Instr ADDX(-9) -- Instr Cycle 2
+Ending Cycle 181 -- X Reg 16
+Starting Cycle 182 -- X Reg 16 -- Instr ADDX(-9) -- Instr Cycle 1
+	ADDX -9
+Ending Cycle 182 -- X Reg 7
+Need to Load Instruction: idx 110 - inst ADDX(18)
+Starting Cycle 183 -- X Reg 7 -- Instr ADDX(18) -- Instr Cycle 2
+Ending Cycle 183 -- X Reg 7
+Starting Cycle 184 -- X Reg 7 -- Instr ADDX(18) -- Instr Cycle 1
+	ADDX 18
+Ending Cycle 184 -- X Reg 25
+Need to Load Instruction: idx 111 - inst ADDX(1)
+Starting Cycle 185 -- X Reg 25 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 185 -- X Reg 25
+Starting Cycle 186 -- X Reg 25 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 186 -- X Reg 26
+Need to Load Instruction: idx 112 - inst ADDX(2)
+Starting Cycle 187 -- X Reg 26 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 187 -- X Reg 26
+Starting Cycle 188 -- X Reg 26 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 188 -- X Reg 28
+Need to Load Instruction: idx 113 - inst NOOP
+Starting Cycle 189 -- X Reg 28 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 189 -- X Reg 28
+Need to Load Instruction: idx 114 - inst NOOP
+Starting Cycle 190 -- X Reg 28 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 190 -- X Reg 28
+Need to Load Instruction: idx 115 - inst ADDX(9)
+Starting Cycle 191 -- X Reg 28 -- Instr ADDX(9) -- Instr Cycle 2
+Ending Cycle 191 -- X Reg 28
+Starting Cycle 192 -- X Reg 28 -- Instr ADDX(9) -- Instr Cycle 1
+	ADDX 9
+Ending Cycle 192 -- X Reg 37
+Need to Load Instruction: idx 116 - inst NOOP
+Starting Cycle 193 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 193 -- X Reg 37
+Need to Load Instruction: idx 117 - inst NOOP
+Starting Cycle 194 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 194 -- X Reg 37
+Need to Load Instruction: idx 118 - inst NOOP
+Starting Cycle 195 -- X Reg 37 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 195 -- X Reg 37
+Need to Load Instruction: idx 119 - inst ADDX(-1)
+Starting Cycle 196 -- X Reg 37 -- Instr ADDX(-1) -- Instr Cycle 2
+Ending Cycle 196 -- X Reg 37
+Starting Cycle 197 -- X Reg 37 -- Instr ADDX(-1) -- Instr Cycle 1
+	ADDX -1
+Ending Cycle 197 -- X Reg 36
+Need to Load Instruction: idx 120 - inst ADDX(2)
+Starting Cycle 198 -- X Reg 36 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 198 -- X Reg 36
+Starting Cycle 199 -- X Reg 36 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 199 -- X Reg 38
+Need to Load Instruction: idx 121 - inst ADDX(-37)
+Starting Cycle 200 -- X Reg 38 -- Instr ADDX(-37) -- Instr Cycle 2
+Ending Cycle 200 -- X Reg 38
+Starting Cycle 201 -- X Reg 38 -- Instr ADDX(-37) -- Instr Cycle 1
+	ADDX -37
+Ending Cycle 201 -- X Reg 1
+Need to Load Instruction: idx 122 - inst ADDX(1)
+Starting Cycle 202 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 202 -- X Reg 1
+Starting Cycle 203 -- X Reg 1 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 203 -- X Reg 2
+Need to Load Instruction: idx 123 - inst ADDX(3)
+Starting Cycle 204 -- X Reg 2 -- Instr ADDX(3) -- Instr Cycle 2
+Ending Cycle 204 -- X Reg 2
+Starting Cycle 205 -- X Reg 2 -- Instr ADDX(3) -- Instr Cycle 1
+	ADDX 3
+Ending Cycle 205 -- X Reg 5
+Need to Load Instruction: idx 124 - inst NOOP
+Starting Cycle 206 -- X Reg 5 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 206 -- X Reg 5
+Need to Load Instruction: idx 125 - inst ADDX(15)
+Starting Cycle 207 -- X Reg 5 -- Instr ADDX(15) -- Instr Cycle 2
+Ending Cycle 207 -- X Reg 5
+Starting Cycle 208 -- X Reg 5 -- Instr ADDX(15) -- Instr Cycle 1
+	ADDX 15
+Ending Cycle 208 -- X Reg 20
+Need to Load Instruction: idx 126 - inst ADDX(-21)
+Starting Cycle 209 -- X Reg 20 -- Instr ADDX(-21) -- Instr Cycle 2
+Ending Cycle 209 -- X Reg 20
+Starting Cycle 210 -- X Reg 20 -- Instr ADDX(-21) -- Instr Cycle 1
+	ADDX -21
+Ending Cycle 210 -- X Reg -1
+Need to Load Instruction: idx 127 - inst ADDX(22)
+Starting Cycle 211 -- X Reg -1 -- Instr ADDX(22) -- Instr Cycle 2
+Ending Cycle 211 -- X Reg -1
+Starting Cycle 212 -- X Reg -1 -- Instr ADDX(22) -- Instr Cycle 1
+	ADDX 22
+Ending Cycle 212 -- X Reg 21
+Need to Load Instruction: idx 128 - inst ADDX(-6)
+Starting Cycle 213 -- X Reg 21 -- Instr ADDX(-6) -- Instr Cycle 2
+Ending Cycle 213 -- X Reg 21
+Starting Cycle 214 -- X Reg 21 -- Instr ADDX(-6) -- Instr Cycle 1
+	ADDX -6
+Ending Cycle 214 -- X Reg 15
+Need to Load Instruction: idx 129 - inst ADDX(1)
+Starting Cycle 215 -- X Reg 15 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 215 -- X Reg 15
+Starting Cycle 216 -- X Reg 15 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 216 -- X Reg 16
+Need to Load Instruction: idx 130 - inst NOOP
+Starting Cycle 217 -- X Reg 16 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 217 -- X Reg 16
+Need to Load Instruction: idx 131 - inst ADDX(2)
+Starting Cycle 218 -- X Reg 16 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 218 -- X Reg 16
+Starting Cycle 219 -- X Reg 16 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 219 -- X Reg 18
+Need to Load Instruction: idx 132 - inst ADDX(1)
+Starting Cycle 220 -- X Reg 18 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 220 -- X Reg 18
+Recording on cnt 220 val 18
+Starting Cycle 221 -- X Reg 18 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 221 -- X Reg 19
+Need to Load Instruction: idx 133 - inst NOOP
+Starting Cycle 222 -- X Reg 19 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 222 -- X Reg 19
+Need to Load Instruction: idx 134 - inst ADDX(-10)
+Starting Cycle 223 -- X Reg 19 -- Instr ADDX(-10) -- Instr Cycle 2
+Ending Cycle 223 -- X Reg 19
+Starting Cycle 224 -- X Reg 19 -- Instr ADDX(-10) -- Instr Cycle 1
+	ADDX -10
+Ending Cycle 224 -- X Reg 9
+Need to Load Instruction: idx 135 - inst NOOP
+Starting Cycle 225 -- X Reg 9 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 225 -- X Reg 9
+Need to Load Instruction: idx 136 - inst NOOP
+Starting Cycle 226 -- X Reg 9 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 226 -- X Reg 9
+Need to Load Instruction: idx 137 - inst ADDX(20)
+Starting Cycle 227 -- X Reg 9 -- Instr ADDX(20) -- Instr Cycle 2
+Ending Cycle 227 -- X Reg 9
+Starting Cycle 228 -- X Reg 9 -- Instr ADDX(20) -- Instr Cycle 1
+	ADDX 20
+Ending Cycle 228 -- X Reg 29
+Need to Load Instruction: idx 138 - inst ADDX(1)
+Starting Cycle 229 -- X Reg 29 -- Instr ADDX(1) -- Instr Cycle 2
+Ending Cycle 229 -- X Reg 29
+Starting Cycle 230 -- X Reg 29 -- Instr ADDX(1) -- Instr Cycle 1
+	ADDX 1
+Ending Cycle 230 -- X Reg 30
+Need to Load Instruction: idx 139 - inst ADDX(2)
+Starting Cycle 231 -- X Reg 30 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 231 -- X Reg 30
+Starting Cycle 232 -- X Reg 30 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 232 -- X Reg 32
+Need to Load Instruction: idx 140 - inst ADDX(2)
+Starting Cycle 233 -- X Reg 32 -- Instr ADDX(2) -- Instr Cycle 2
+Ending Cycle 233 -- X Reg 32
+Starting Cycle 234 -- X Reg 32 -- Instr ADDX(2) -- Instr Cycle 1
+	ADDX 2
+Ending Cycle 234 -- X Reg 34
+Need to Load Instruction: idx 141 - inst ADDX(-6)
+Starting Cycle 235 -- X Reg 34 -- Instr ADDX(-6) -- Instr Cycle 2
+Ending Cycle 235 -- X Reg 34
+Starting Cycle 236 -- X Reg 34 -- Instr ADDX(-6) -- Instr Cycle 1
+	ADDX -6
+Ending Cycle 236 -- X Reg 28
+Need to Load Instruction: idx 142 - inst ADDX(-11)
+Starting Cycle 237 -- X Reg 28 -- Instr ADDX(-11) -- Instr Cycle 2
+Ending Cycle 237 -- X Reg 28
+Starting Cycle 238 -- X Reg 28 -- Instr ADDX(-11) -- Instr Cycle 1
+	ADDX -11
+Ending Cycle 238 -- X Reg 17
+Need to Load Instruction: idx 143 - inst NOOP
+Starting Cycle 239 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 239 -- X Reg 17
+Need to Load Instruction: idx 144 - inst NOOP
+Starting Cycle 240 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 240 -- X Reg 17
+Need to Load Instruction: idx 145 - inst NOOP
+Starting Cycle 241 -- X Reg 17 -- Instr NOOP -- Instr Cycle 1
+	NOOP - Nothing to do
+Ending Cycle 241 -- X Reg 17
+13140
+
+
+Ending
