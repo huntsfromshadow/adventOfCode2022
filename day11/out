@@ -1,0 +1,1740 @@
+Monkey 0:
+  Monkey inspects an item with a worry level of 79.
+    Worry level is * by 19 to 1501.
+    Monkey gets bored with item. Worry level is divided by 3 to 500
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1501 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 98.
+    Worry level is * by 19 to 1862.
+    Monkey gets bored with item. Worry level is divided by 3 to 620
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1862 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 54.
+    Worry level is + by 6 to 60.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 60 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 65.
+    Worry level is + by 6 to 71.
+    Monkey gets bored with item. Worry level is divided by 3 to 23
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 71 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 75.
+    Worry level is + by 6 to 81.
+    Monkey gets bored with item. Worry level is divided by 3 to 27
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 81 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 74.
+    Worry level is + by 6 to 80.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 80 is thrown to monkey 0
+Monkey 2:
+  Monkey inspects an item with a worry level of 79.
+    Worry level is * by old to 6241.
+    Monkey gets bored with item. Worry level is divided by 3 to 2080
+    Cur Worry divisible by 13 -> True
+    Item with worry level of 6241 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 60.
+    Worry level is * by old to 3600.
+    Monkey gets bored with item. Worry level is divided by 3 to 1200
+    Cur Worry divisible by 13 -> False
+    Item with worry level of 3600 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 97.
+    Worry level is * by old to 9409.
+    Monkey gets bored with item. Worry level is divided by 3 to 3136
+    Cur Worry divisible by 13 -> False
+    Item with worry level of 9409 is thrown to monkey 3
+Monkey 3:
+  Monkey inspects an item with a worry level of 74.
+    Worry level is + by 3 to 77.
+    Monkey gets bored with item. Worry level is divided by 3 to 25
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 77 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 500.
+    Worry level is + by 3 to 503.
+    Monkey gets bored with item. Worry level is divided by 3 to 167
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 503 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 620.
+    Worry level is + by 3 to 623.
+    Monkey gets bored with item. Worry level is divided by 3 to 207
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 623 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 1200.
+    Worry level is + by 3 to 1203.
+    Monkey gets bored with item. Worry level is divided by 3 to 401
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1203 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 3136.
+    Worry level is + by 3 to 3139.
+    Monkey gets bored with item. Worry level is divided by 3 to 1046
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 3139 is thrown to monkey 1
+
+Round Result:  1
+Monkey 0: 20,23,27,26
+Monkey 1: 2080,25,167,207,401,1046
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 20.
+    Worry level is * by 19 to 380.
+    Monkey gets bored with item. Worry level is divided by 3 to 126
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 380 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 23.
+    Worry level is * by 19 to 437.
+    Monkey gets bored with item. Worry level is divided by 3 to 145
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 437 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 27.
+    Worry level is * by 19 to 513.
+    Monkey gets bored with item. Worry level is divided by 3 to 171
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 513 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 26.
+    Worry level is * by 19 to 494.
+    Monkey gets bored with item. Worry level is divided by 3 to 164
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 494 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 2080.
+    Worry level is + by 6 to 2086.
+    Monkey gets bored with item. Worry level is divided by 3 to 695
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 2086 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 25.
+    Worry level is + by 6 to 31.
+    Monkey gets bored with item. Worry level is divided by 3 to 10
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 31 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 167.
+    Worry level is + by 6 to 173.
+    Monkey gets bored with item. Worry level is divided by 3 to 57
+    Cur Worry divisible by 19 -> True
+    Item with worry level of 173 is thrown to monkey 2
+  Monkey inspects an item with a worry level of 207.
+    Worry level is + by 6 to 213.
+    Monkey gets bored with item. Worry level is divided by 3 to 71
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 213 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 401.
+    Worry level is + by 6 to 407.
+    Monkey gets bored with item. Worry level is divided by 3 to 135
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 407 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 1046.
+    Worry level is + by 6 to 1052.
+    Monkey gets bored with item. Worry level is divided by 3 to 350
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 1052 is thrown to monkey 0
+Monkey 2:
+  Monkey inspects an item with a worry level of 57.
+    Worry level is * by old to 3249.
+    Monkey gets bored with item. Worry level is divided by 3 to 1083
+    Cur Worry divisible by 13 -> False
+    Item with worry level of 3249 is thrown to monkey 3
+Monkey 3:
+  Monkey inspects an item with a worry level of 126.
+    Worry level is + by 3 to 129.
+    Monkey gets bored with item. Worry level is divided by 3 to 43
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 129 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 145.
+    Worry level is + by 3 to 148.
+    Monkey gets bored with item. Worry level is divided by 3 to 49
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 148 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 171.
+    Worry level is + by 3 to 174.
+    Monkey gets bored with item. Worry level is divided by 3 to 58
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 174 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 164.
+    Worry level is + by 3 to 167.
+    Monkey gets bored with item. Worry level is divided by 3 to 55
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 167 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 1083.
+    Worry level is + by 3 to 1086.
+    Monkey gets bored with item. Worry level is divided by 3 to 362
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1086 is thrown to monkey 1
+
+Round Result:  2
+Monkey 0: 695,10,71,135,350
+Monkey 1: 43,49,58,55,362
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 695.
+    Worry level is * by 19 to 13205.
+    Monkey gets bored with item. Worry level is divided by 3 to 4401
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 13205 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 10.
+    Worry level is * by 19 to 190.
+    Monkey gets bored with item. Worry level is divided by 3 to 63
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 190 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 71.
+    Worry level is * by 19 to 1349.
+    Monkey gets bored with item. Worry level is divided by 3 to 449
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1349 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 135.
+    Worry level is * by 19 to 2565.
+    Monkey gets bored with item. Worry level is divided by 3 to 855
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2565 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 350.
+    Worry level is * by 19 to 6650.
+    Monkey gets bored with item. Worry level is divided by 3 to 2216
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 6650 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 43.
+    Worry level is + by 6 to 49.
+    Monkey gets bored with item. Worry level is divided by 3 to 16
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 49 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 49.
+    Worry level is + by 6 to 55.
+    Monkey gets bored with item. Worry level is divided by 3 to 18
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 55 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 58.
+    Worry level is + by 6 to 64.
+    Monkey gets bored with item. Worry level is divided by 3 to 21
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 64 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 55.
+    Worry level is + by 6 to 61.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 61 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 362.
+    Worry level is + by 6 to 368.
+    Monkey gets bored with item. Worry level is divided by 3 to 122
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 368 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 4401.
+    Worry level is + by 3 to 4404.
+    Monkey gets bored with item. Worry level is divided by 3 to 1468
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 4404 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 63.
+    Worry level is + by 3 to 66.
+    Monkey gets bored with item. Worry level is divided by 3 to 22
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 66 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 449.
+    Worry level is + by 3 to 452.
+    Monkey gets bored with item. Worry level is divided by 3 to 150
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 452 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 855.
+    Worry level is + by 3 to 858.
+    Monkey gets bored with item. Worry level is divided by 3 to 286
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 858 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 2216.
+    Worry level is + by 3 to 2219.
+    Monkey gets bored with item. Worry level is divided by 3 to 739
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 2219 is thrown to monkey 1
+
+Round Result:  3
+Monkey 0: 16,18,21,20,122
+Monkey 1: 1468,22,150,286,739
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 16.
+    Worry level is * by 19 to 304.
+    Monkey gets bored with item. Worry level is divided by 3 to 101
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 304 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 18.
+    Worry level is * by 19 to 342.
+    Monkey gets bored with item. Worry level is divided by 3 to 114
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 342 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 21.
+    Worry level is * by 19 to 399.
+    Monkey gets bored with item. Worry level is divided by 3 to 133
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 399 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 20.
+    Worry level is * by 19 to 380.
+    Monkey gets bored with item. Worry level is divided by 3 to 126
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 380 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 122.
+    Worry level is * by 19 to 2318.
+    Monkey gets bored with item. Worry level is divided by 3 to 772
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2318 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 1468.
+    Worry level is + by 6 to 1474.
+    Monkey gets bored with item. Worry level is divided by 3 to 491
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 1474 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 22.
+    Worry level is + by 6 to 28.
+    Monkey gets bored with item. Worry level is divided by 3 to 9
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 28 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 150.
+    Worry level is + by 6 to 156.
+    Monkey gets bored with item. Worry level is divided by 3 to 52
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 156 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 286.
+    Worry level is + by 6 to 292.
+    Monkey gets bored with item. Worry level is divided by 3 to 97
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 292 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 739.
+    Worry level is + by 6 to 745.
+    Monkey gets bored with item. Worry level is divided by 3 to 248
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 745 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 101.
+    Worry level is + by 3 to 104.
+    Monkey gets bored with item. Worry level is divided by 3 to 34
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 104 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 114.
+    Worry level is + by 3 to 117.
+    Monkey gets bored with item. Worry level is divided by 3 to 39
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 117 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 133.
+    Worry level is + by 3 to 136.
+    Monkey gets bored with item. Worry level is divided by 3 to 45
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 136 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 126.
+    Worry level is + by 3 to 129.
+    Monkey gets bored with item. Worry level is divided by 3 to 43
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 129 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 772.
+    Worry level is + by 3 to 775.
+    Monkey gets bored with item. Worry level is divided by 3 to 258
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 775 is thrown to monkey 1
+
+Round Result:  4
+Monkey 0: 491,9,52,97,248,34
+Monkey 1: 39,45,43,258
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 491.
+    Worry level is * by 19 to 9329.
+    Monkey gets bored with item. Worry level is divided by 3 to 3109
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 9329 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 9.
+    Worry level is * by 19 to 171.
+    Monkey gets bored with item. Worry level is divided by 3 to 57
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 171 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 52.
+    Worry level is * by 19 to 988.
+    Monkey gets bored with item. Worry level is divided by 3 to 329
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 988 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 97.
+    Worry level is * by 19 to 1843.
+    Monkey gets bored with item. Worry level is divided by 3 to 614
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1843 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 248.
+    Worry level is * by 19 to 4712.
+    Monkey gets bored with item. Worry level is divided by 3 to 1570
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 4712 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 34.
+    Worry level is * by 19 to 646.
+    Monkey gets bored with item. Worry level is divided by 3 to 215
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 646 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 39.
+    Worry level is + by 6 to 45.
+    Monkey gets bored with item. Worry level is divided by 3 to 15
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 45 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 45.
+    Worry level is + by 6 to 51.
+    Monkey gets bored with item. Worry level is divided by 3 to 17
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 51 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 43.
+    Worry level is + by 6 to 49.
+    Monkey gets bored with item. Worry level is divided by 3 to 16
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 49 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 258.
+    Worry level is + by 6 to 264.
+    Monkey gets bored with item. Worry level is divided by 3 to 88
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 264 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 3109.
+    Worry level is + by 3 to 3112.
+    Monkey gets bored with item. Worry level is divided by 3 to 1037
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 3112 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 57.
+    Worry level is + by 3 to 60.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 60 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 329.
+    Worry level is + by 3 to 332.
+    Monkey gets bored with item. Worry level is divided by 3 to 110
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 332 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 614.
+    Worry level is + by 3 to 617.
+    Monkey gets bored with item. Worry level is divided by 3 to 205
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 617 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 1570.
+    Worry level is + by 3 to 1573.
+    Monkey gets bored with item. Worry level is divided by 3 to 524
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1573 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 215.
+    Worry level is + by 3 to 218.
+    Monkey gets bored with item. Worry level is divided by 3 to 72
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 218 is thrown to monkey 1
+
+Round Result:  5
+Monkey 0: 15,17,16,88,1037
+Monkey 1: 20,110,205,524,72
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 15.
+    Worry level is * by 19 to 285.
+    Monkey gets bored with item. Worry level is divided by 3 to 95
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 285 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 17.
+    Worry level is * by 19 to 323.
+    Monkey gets bored with item. Worry level is divided by 3 to 107
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 323 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 16.
+    Worry level is * by 19 to 304.
+    Monkey gets bored with item. Worry level is divided by 3 to 101
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 304 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 88.
+    Worry level is * by 19 to 1672.
+    Monkey gets bored with item. Worry level is divided by 3 to 557
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1672 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 1037.
+    Worry level is * by 19 to 19703.
+    Monkey gets bored with item. Worry level is divided by 3 to 6567
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 19703 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 20.
+    Worry level is + by 6 to 26.
+    Monkey gets bored with item. Worry level is divided by 3 to 8
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 26 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 110.
+    Worry level is + by 6 to 116.
+    Monkey gets bored with item. Worry level is divided by 3 to 38
+    Cur Worry divisible by 19 -> True
+    Item with worry level of 116 is thrown to monkey 2
+  Monkey inspects an item with a worry level of 205.
+    Worry level is + by 6 to 211.
+    Monkey gets bored with item. Worry level is divided by 3 to 70
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 211 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 524.
+    Worry level is + by 6 to 530.
+    Monkey gets bored with item. Worry level is divided by 3 to 176
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 530 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 72.
+    Worry level is + by 6 to 78.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 78 is thrown to monkey 0
+Monkey 2:
+  Monkey inspects an item with a worry level of 38.
+    Worry level is * by old to 1444.
+    Monkey gets bored with item. Worry level is divided by 3 to 481
+    Cur Worry divisible by 13 -> True
+    Item with worry level of 1444 is thrown to monkey 1
+Monkey 3:
+  Monkey inspects an item with a worry level of 95.
+    Worry level is + by 3 to 98.
+    Monkey gets bored with item. Worry level is divided by 3 to 32
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 98 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 107.
+    Worry level is + by 3 to 110.
+    Monkey gets bored with item. Worry level is divided by 3 to 36
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 110 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 101.
+    Worry level is + by 3 to 104.
+    Monkey gets bored with item. Worry level is divided by 3 to 34
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 104 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 557.
+    Worry level is + by 3 to 560.
+    Monkey gets bored with item. Worry level is divided by 3 to 186
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 560 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 6567.
+    Worry level is + by 3 to 6570.
+    Monkey gets bored with item. Worry level is divided by 3 to 2190
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 6570 is thrown to monkey 1
+
+Round Result:  6
+Monkey 0: 8,70,176,26,34
+Monkey 1: 481,32,36,186,2190
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 8.
+    Worry level is * by 19 to 152.
+    Monkey gets bored with item. Worry level is divided by 3 to 50
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 152 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 70.
+    Worry level is * by 19 to 1330.
+    Monkey gets bored with item. Worry level is divided by 3 to 443
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1330 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 176.
+    Worry level is * by 19 to 3344.
+    Monkey gets bored with item. Worry level is divided by 3 to 1114
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 3344 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 26.
+    Worry level is * by 19 to 494.
+    Monkey gets bored with item. Worry level is divided by 3 to 164
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 494 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 34.
+    Worry level is * by 19 to 646.
+    Monkey gets bored with item. Worry level is divided by 3 to 215
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 646 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 481.
+    Worry level is + by 6 to 487.
+    Monkey gets bored with item. Worry level is divided by 3 to 162
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 487 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 32.
+    Worry level is + by 6 to 38.
+    Monkey gets bored with item. Worry level is divided by 3 to 12
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 38 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 36.
+    Worry level is + by 6 to 42.
+    Monkey gets bored with item. Worry level is divided by 3 to 14
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 42 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 186.
+    Worry level is + by 6 to 192.
+    Monkey gets bored with item. Worry level is divided by 3 to 64
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 192 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 2190.
+    Worry level is + by 6 to 2196.
+    Monkey gets bored with item. Worry level is divided by 3 to 732
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 2196 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 50.
+    Worry level is + by 3 to 53.
+    Monkey gets bored with item. Worry level is divided by 3 to 17
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 53 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 443.
+    Worry level is + by 3 to 446.
+    Monkey gets bored with item. Worry level is divided by 3 to 148
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 446 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 1114.
+    Worry level is + by 3 to 1117.
+    Monkey gets bored with item. Worry level is divided by 3 to 372
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1117 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 164.
+    Worry level is + by 3 to 167.
+    Monkey gets bored with item. Worry level is divided by 3 to 55
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 167 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 215.
+    Worry level is + by 3 to 218.
+    Monkey gets bored with item. Worry level is divided by 3 to 72
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 218 is thrown to monkey 1
+
+Round Result:  7
+Monkey 0: 162,12,14,64,732,17
+Monkey 1: 148,372,55,72
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 162.
+    Worry level is * by 19 to 3078.
+    Monkey gets bored with item. Worry level is divided by 3 to 1026
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 3078 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 12.
+    Worry level is * by 19 to 228.
+    Monkey gets bored with item. Worry level is divided by 3 to 76
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 228 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 14.
+    Worry level is * by 19 to 266.
+    Monkey gets bored with item. Worry level is divided by 3 to 88
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 266 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 64.
+    Worry level is * by 19 to 1216.
+    Monkey gets bored with item. Worry level is divided by 3 to 405
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1216 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 732.
+    Worry level is * by 19 to 13908.
+    Monkey gets bored with item. Worry level is divided by 3 to 4636
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 13908 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 17.
+    Worry level is * by 19 to 323.
+    Monkey gets bored with item. Worry level is divided by 3 to 107
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 323 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 148.
+    Worry level is + by 6 to 154.
+    Monkey gets bored with item. Worry level is divided by 3 to 51
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 154 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 372.
+    Worry level is + by 6 to 378.
+    Monkey gets bored with item. Worry level is divided by 3 to 126
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 378 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 55.
+    Worry level is + by 6 to 61.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 61 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 72.
+    Worry level is + by 6 to 78.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 78 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 1026.
+    Worry level is + by 3 to 1029.
+    Monkey gets bored with item. Worry level is divided by 3 to 343
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1029 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 76.
+    Worry level is + by 3 to 79.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 79 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 88.
+    Worry level is + by 3 to 91.
+    Monkey gets bored with item. Worry level is divided by 3 to 30
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 91 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 405.
+    Worry level is + by 3 to 408.
+    Monkey gets bored with item. Worry level is divided by 3 to 136
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 408 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 4636.
+    Worry level is + by 3 to 4639.
+    Monkey gets bored with item. Worry level is divided by 3 to 1546
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 4639 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 107.
+    Worry level is + by 3 to 110.
+    Monkey gets bored with item. Worry level is divided by 3 to 36
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 110 is thrown to monkey 1
+
+Round Result:  8
+Monkey 0: 51,126,20,26,136
+Monkey 1: 343,26,30,1546,36
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 51.
+    Worry level is * by 19 to 969.
+    Monkey gets bored with item. Worry level is divided by 3 to 323
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 969 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 126.
+    Worry level is * by 19 to 2394.
+    Monkey gets bored with item. Worry level is divided by 3 to 798
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2394 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 20.
+    Worry level is * by 19 to 380.
+    Monkey gets bored with item. Worry level is divided by 3 to 126
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 380 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 26.
+    Worry level is * by 19 to 494.
+    Monkey gets bored with item. Worry level is divided by 3 to 164
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 494 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 136.
+    Worry level is * by 19 to 2584.
+    Monkey gets bored with item. Worry level is divided by 3 to 861
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2584 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 343.
+    Worry level is + by 6 to 349.
+    Monkey gets bored with item. Worry level is divided by 3 to 116
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 349 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 26.
+    Worry level is + by 6 to 32.
+    Monkey gets bored with item. Worry level is divided by 3 to 10
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 32 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 30.
+    Worry level is + by 6 to 36.
+    Monkey gets bored with item. Worry level is divided by 3 to 12
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 36 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 1546.
+    Worry level is + by 6 to 1552.
+    Monkey gets bored with item. Worry level is divided by 3 to 517
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 1552 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 36.
+    Worry level is + by 6 to 42.
+    Monkey gets bored with item. Worry level is divided by 3 to 14
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 42 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 323.
+    Worry level is + by 3 to 326.
+    Monkey gets bored with item. Worry level is divided by 3 to 108
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 326 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 798.
+    Worry level is + by 3 to 801.
+    Monkey gets bored with item. Worry level is divided by 3 to 267
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 801 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 126.
+    Worry level is + by 3 to 129.
+    Monkey gets bored with item. Worry level is divided by 3 to 43
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 129 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 164.
+    Worry level is + by 3 to 167.
+    Monkey gets bored with item. Worry level is divided by 3 to 55
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 167 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 861.
+    Worry level is + by 3 to 864.
+    Monkey gets bored with item. Worry level is divided by 3 to 288
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 864 is thrown to monkey 1
+
+Round Result:  9
+Monkey 0: 116,10,12,517,14
+Monkey 1: 108,267,43,55,288
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 116.
+    Worry level is * by 19 to 2204.
+    Monkey gets bored with item. Worry level is divided by 3 to 734
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2204 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 10.
+    Worry level is * by 19 to 190.
+    Monkey gets bored with item. Worry level is divided by 3 to 63
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 190 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 12.
+    Worry level is * by 19 to 228.
+    Monkey gets bored with item. Worry level is divided by 3 to 76
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 228 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 517.
+    Worry level is * by 19 to 9823.
+    Monkey gets bored with item. Worry level is divided by 3 to 3274
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 9823 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 14.
+    Worry level is * by 19 to 266.
+    Monkey gets bored with item. Worry level is divided by 3 to 88
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 266 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 108.
+    Worry level is + by 6 to 114.
+    Monkey gets bored with item. Worry level is divided by 3 to 38
+    Cur Worry divisible by 19 -> True
+    Item with worry level of 114 is thrown to monkey 2
+  Monkey inspects an item with a worry level of 267.
+    Worry level is + by 6 to 273.
+    Monkey gets bored with item. Worry level is divided by 3 to 91
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 273 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 43.
+    Worry level is + by 6 to 49.
+    Monkey gets bored with item. Worry level is divided by 3 to 16
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 49 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 55.
+    Worry level is + by 6 to 61.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 61 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 288.
+    Worry level is + by 6 to 294.
+    Monkey gets bored with item. Worry level is divided by 3 to 98
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 294 is thrown to monkey 0
+Monkey 2:
+  Monkey inspects an item with a worry level of 38.
+    Worry level is * by old to 1444.
+    Monkey gets bored with item. Worry level is divided by 3 to 481
+    Cur Worry divisible by 13 -> True
+    Item with worry level of 1444 is thrown to monkey 1
+Monkey 3:
+  Monkey inspects an item with a worry level of 734.
+    Worry level is + by 3 to 737.
+    Monkey gets bored with item. Worry level is divided by 3 to 245
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 737 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 63.
+    Worry level is + by 3 to 66.
+    Monkey gets bored with item. Worry level is divided by 3 to 22
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 66 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 76.
+    Worry level is + by 3 to 79.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 79 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 3274.
+    Worry level is + by 3 to 3277.
+    Monkey gets bored with item. Worry level is divided by 3 to 1092
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 3277 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 88.
+    Worry level is + by 3 to 91.
+    Monkey gets bored with item. Worry level is divided by 3 to 30
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 91 is thrown to monkey 1
+
+Round Result:  10
+Monkey 0: 91,16,20,98
+Monkey 1: 481,245,22,26,1092,30
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 91.
+    Worry level is * by 19 to 1729.
+    Monkey gets bored with item. Worry level is divided by 3 to 576
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1729 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 16.
+    Worry level is * by 19 to 304.
+    Monkey gets bored with item. Worry level is divided by 3 to 101
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 304 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 20.
+    Worry level is * by 19 to 380.
+    Monkey gets bored with item. Worry level is divided by 3 to 126
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 380 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 98.
+    Worry level is * by 19 to 1862.
+    Monkey gets bored with item. Worry level is divided by 3 to 620
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1862 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 481.
+    Worry level is + by 6 to 487.
+    Monkey gets bored with item. Worry level is divided by 3 to 162
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 487 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 245.
+    Worry level is + by 6 to 251.
+    Monkey gets bored with item. Worry level is divided by 3 to 83
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 251 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 22.
+    Worry level is + by 6 to 28.
+    Monkey gets bored with item. Worry level is divided by 3 to 9
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 28 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 26.
+    Worry level is + by 6 to 32.
+    Monkey gets bored with item. Worry level is divided by 3 to 10
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 32 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 1092.
+    Worry level is + by 6 to 1098.
+    Monkey gets bored with item. Worry level is divided by 3 to 366
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 1098 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 30.
+    Worry level is + by 6 to 36.
+    Monkey gets bored with item. Worry level is divided by 3 to 12
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 36 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 576.
+    Worry level is + by 3 to 579.
+    Monkey gets bored with item. Worry level is divided by 3 to 193
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 579 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 101.
+    Worry level is + by 3 to 104.
+    Monkey gets bored with item. Worry level is divided by 3 to 34
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 104 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 126.
+    Worry level is + by 3 to 129.
+    Monkey gets bored with item. Worry level is divided by 3 to 43
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 129 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 620.
+    Worry level is + by 3 to 623.
+    Monkey gets bored with item. Worry level is divided by 3 to 207
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 623 is thrown to monkey 1
+
+Round Result:  11
+Monkey 0: 162,83,9,10,366,12,34
+Monkey 1: 193,43,207
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 162.
+    Worry level is * by 19 to 3078.
+    Monkey gets bored with item. Worry level is divided by 3 to 1026
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 3078 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 83.
+    Worry level is * by 19 to 1577.
+    Monkey gets bored with item. Worry level is divided by 3 to 525
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1577 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 9.
+    Worry level is * by 19 to 171.
+    Monkey gets bored with item. Worry level is divided by 3 to 57
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 171 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 10.
+    Worry level is * by 19 to 190.
+    Monkey gets bored with item. Worry level is divided by 3 to 63
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 190 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 366.
+    Worry level is * by 19 to 6954.
+    Monkey gets bored with item. Worry level is divided by 3 to 2318
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 6954 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 12.
+    Worry level is * by 19 to 228.
+    Monkey gets bored with item. Worry level is divided by 3 to 76
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 228 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 34.
+    Worry level is * by 19 to 646.
+    Monkey gets bored with item. Worry level is divided by 3 to 215
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 646 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 193.
+    Worry level is + by 6 to 199.
+    Monkey gets bored with item. Worry level is divided by 3 to 66
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 199 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 43.
+    Worry level is + by 6 to 49.
+    Monkey gets bored with item. Worry level is divided by 3 to 16
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 49 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 207.
+    Worry level is + by 6 to 213.
+    Monkey gets bored with item. Worry level is divided by 3 to 71
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 213 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 1026.
+    Worry level is + by 3 to 1029.
+    Monkey gets bored with item. Worry level is divided by 3 to 343
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1029 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 525.
+    Worry level is + by 3 to 528.
+    Monkey gets bored with item. Worry level is divided by 3 to 176
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 528 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 57.
+    Worry level is + by 3 to 60.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 60 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 63.
+    Worry level is + by 3 to 66.
+    Monkey gets bored with item. Worry level is divided by 3 to 22
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 66 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 2318.
+    Worry level is + by 3 to 2321.
+    Monkey gets bored with item. Worry level is divided by 3 to 773
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 2321 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 76.
+    Worry level is + by 3 to 79.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 79 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 215.
+    Worry level is + by 3 to 218.
+    Monkey gets bored with item. Worry level is divided by 3 to 72
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 218 is thrown to monkey 1
+
+Round Result:  12
+Monkey 0: 66,16,71
+Monkey 1: 343,176,20,22,773,26,72
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 66.
+    Worry level is * by 19 to 1254.
+    Monkey gets bored with item. Worry level is divided by 3 to 418
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1254 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 16.
+    Worry level is * by 19 to 304.
+    Monkey gets bored with item. Worry level is divided by 3 to 101
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 304 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 71.
+    Worry level is * by 19 to 1349.
+    Monkey gets bored with item. Worry level is divided by 3 to 449
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1349 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 343.
+    Worry level is + by 6 to 349.
+    Monkey gets bored with item. Worry level is divided by 3 to 116
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 349 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 176.
+    Worry level is + by 6 to 182.
+    Monkey gets bored with item. Worry level is divided by 3 to 60
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 182 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 20.
+    Worry level is + by 6 to 26.
+    Monkey gets bored with item. Worry level is divided by 3 to 8
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 26 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 22.
+    Worry level is + by 6 to 28.
+    Monkey gets bored with item. Worry level is divided by 3 to 9
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 28 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 773.
+    Worry level is + by 6 to 779.
+    Monkey gets bored with item. Worry level is divided by 3 to 259
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 779 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 26.
+    Worry level is + by 6 to 32.
+    Monkey gets bored with item. Worry level is divided by 3 to 10
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 32 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 72.
+    Worry level is + by 6 to 78.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 78 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 418.
+    Worry level is + by 3 to 421.
+    Monkey gets bored with item. Worry level is divided by 3 to 140
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 421 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 101.
+    Worry level is + by 3 to 104.
+    Monkey gets bored with item. Worry level is divided by 3 to 34
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 104 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 449.
+    Worry level is + by 3 to 452.
+    Monkey gets bored with item. Worry level is divided by 3 to 150
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 452 is thrown to monkey 1
+
+Round Result:  13
+Monkey 0: 116,60,8,9,259,10,26,34
+Monkey 1: 140,150
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 116.
+    Worry level is * by 19 to 2204.
+    Monkey gets bored with item. Worry level is divided by 3 to 734
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2204 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 60.
+    Worry level is * by 19 to 1140.
+    Monkey gets bored with item. Worry level is divided by 3 to 380
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1140 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 8.
+    Worry level is * by 19 to 152.
+    Monkey gets bored with item. Worry level is divided by 3 to 50
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 152 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 9.
+    Worry level is * by 19 to 171.
+    Monkey gets bored with item. Worry level is divided by 3 to 57
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 171 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 259.
+    Worry level is * by 19 to 4921.
+    Monkey gets bored with item. Worry level is divided by 3 to 1640
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 4921 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 10.
+    Worry level is * by 19 to 190.
+    Monkey gets bored with item. Worry level is divided by 3 to 63
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 190 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 26.
+    Worry level is * by 19 to 494.
+    Monkey gets bored with item. Worry level is divided by 3 to 164
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 494 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 34.
+    Worry level is * by 19 to 646.
+    Monkey gets bored with item. Worry level is divided by 3 to 215
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 646 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 140.
+    Worry level is + by 6 to 146.
+    Monkey gets bored with item. Worry level is divided by 3 to 48
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 146 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 150.
+    Worry level is + by 6 to 156.
+    Monkey gets bored with item. Worry level is divided by 3 to 52
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 156 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 734.
+    Worry level is + by 3 to 737.
+    Monkey gets bored with item. Worry level is divided by 3 to 245
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 737 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 380.
+    Worry level is + by 3 to 383.
+    Monkey gets bored with item. Worry level is divided by 3 to 127
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 383 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 50.
+    Worry level is + by 3 to 53.
+    Monkey gets bored with item. Worry level is divided by 3 to 17
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 53 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 57.
+    Worry level is + by 3 to 60.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 60 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 1640.
+    Worry level is + by 3 to 1643.
+    Monkey gets bored with item. Worry level is divided by 3 to 547
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1643 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 63.
+    Worry level is + by 3 to 66.
+    Monkey gets bored with item. Worry level is divided by 3 to 22
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 66 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 164.
+    Worry level is + by 3 to 167.
+    Monkey gets bored with item. Worry level is divided by 3 to 55
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 167 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 215.
+    Worry level is + by 3 to 218.
+    Monkey gets bored with item. Worry level is divided by 3 to 72
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 218 is thrown to monkey 1
+
+Round Result:  14
+Monkey 0: 48,52,17
+Monkey 1: 245,127,20,547,22,55,72
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 48.
+    Worry level is * by 19 to 912.
+    Monkey gets bored with item. Worry level is divided by 3 to 304
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 912 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 52.
+    Worry level is * by 19 to 988.
+    Monkey gets bored with item. Worry level is divided by 3 to 329
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 988 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 17.
+    Worry level is * by 19 to 323.
+    Monkey gets bored with item. Worry level is divided by 3 to 107
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 323 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 245.
+    Worry level is + by 6 to 251.
+    Monkey gets bored with item. Worry level is divided by 3 to 83
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 251 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 127.
+    Worry level is + by 6 to 133.
+    Monkey gets bored with item. Worry level is divided by 3 to 44
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 133 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 20.
+    Worry level is + by 6 to 26.
+    Monkey gets bored with item. Worry level is divided by 3 to 8
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 26 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 547.
+    Worry level is + by 6 to 553.
+    Monkey gets bored with item. Worry level is divided by 3 to 184
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 553 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 22.
+    Worry level is + by 6 to 28.
+    Monkey gets bored with item. Worry level is divided by 3 to 9
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 28 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 55.
+    Worry level is + by 6 to 61.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 61 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 72.
+    Worry level is + by 6 to 78.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 78 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 304.
+    Worry level is + by 3 to 307.
+    Monkey gets bored with item. Worry level is divided by 3 to 102
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 307 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 329.
+    Worry level is + by 3 to 332.
+    Monkey gets bored with item. Worry level is divided by 3 to 110
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 332 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 107.
+    Worry level is + by 3 to 110.
+    Monkey gets bored with item. Worry level is divided by 3 to 36
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 110 is thrown to monkey 1
+
+Round Result:  15
+Monkey 0: 83,44,8,184,9,20,26,102
+Monkey 1: 110,36
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 83.
+    Worry level is * by 19 to 1577.
+    Monkey gets bored with item. Worry level is divided by 3 to 525
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1577 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 44.
+    Worry level is * by 19 to 836.
+    Monkey gets bored with item. Worry level is divided by 3 to 278
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 836 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 8.
+    Worry level is * by 19 to 152.
+    Monkey gets bored with item. Worry level is divided by 3 to 50
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 152 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 184.
+    Worry level is * by 19 to 3496.
+    Monkey gets bored with item. Worry level is divided by 3 to 1165
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 3496 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 9.
+    Worry level is * by 19 to 171.
+    Monkey gets bored with item. Worry level is divided by 3 to 57
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 171 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 20.
+    Worry level is * by 19 to 380.
+    Monkey gets bored with item. Worry level is divided by 3 to 126
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 380 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 26.
+    Worry level is * by 19 to 494.
+    Monkey gets bored with item. Worry level is divided by 3 to 164
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 494 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 102.
+    Worry level is * by 19 to 1938.
+    Monkey gets bored with item. Worry level is divided by 3 to 646
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1938 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 110.
+    Worry level is + by 6 to 116.
+    Monkey gets bored with item. Worry level is divided by 3 to 38
+    Cur Worry divisible by 19 -> True
+    Item with worry level of 116 is thrown to monkey 2
+  Monkey inspects an item with a worry level of 36.
+    Worry level is + by 6 to 42.
+    Monkey gets bored with item. Worry level is divided by 3 to 14
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 42 is thrown to monkey 0
+Monkey 2:
+  Monkey inspects an item with a worry level of 38.
+    Worry level is * by old to 1444.
+    Monkey gets bored with item. Worry level is divided by 3 to 481
+    Cur Worry divisible by 13 -> True
+    Item with worry level of 1444 is thrown to monkey 1
+Monkey 3:
+  Monkey inspects an item with a worry level of 525.
+    Worry level is + by 3 to 528.
+    Monkey gets bored with item. Worry level is divided by 3 to 176
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 528 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 278.
+    Worry level is + by 3 to 281.
+    Monkey gets bored with item. Worry level is divided by 3 to 93
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 281 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 50.
+    Worry level is + by 3 to 53.
+    Monkey gets bored with item. Worry level is divided by 3 to 17
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 53 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 1165.
+    Worry level is + by 3 to 1168.
+    Monkey gets bored with item. Worry level is divided by 3 to 389
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1168 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 57.
+    Worry level is + by 3 to 60.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 60 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 126.
+    Worry level is + by 3 to 129.
+    Monkey gets bored with item. Worry level is divided by 3 to 43
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 129 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 164.
+    Worry level is + by 3 to 167.
+    Monkey gets bored with item. Worry level is divided by 3 to 55
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 167 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 646.
+    Worry level is + by 3 to 649.
+    Monkey gets bored with item. Worry level is divided by 3 to 216
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 649 is thrown to monkey 1
+
+Round Result:  16
+Monkey 0: 14,17
+Monkey 1: 481,176,93,389,20,43,55,216
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 14.
+    Worry level is * by 19 to 266.
+    Monkey gets bored with item. Worry level is divided by 3 to 88
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 266 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 17.
+    Worry level is * by 19 to 323.
+    Monkey gets bored with item. Worry level is divided by 3 to 107
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 323 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 481.
+    Worry level is + by 6 to 487.
+    Monkey gets bored with item. Worry level is divided by 3 to 162
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 487 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 176.
+    Worry level is + by 6 to 182.
+    Monkey gets bored with item. Worry level is divided by 3 to 60
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 182 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 93.
+    Worry level is + by 6 to 99.
+    Monkey gets bored with item. Worry level is divided by 3 to 33
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 99 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 389.
+    Worry level is + by 6 to 395.
+    Monkey gets bored with item. Worry level is divided by 3 to 131
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 395 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 20.
+    Worry level is + by 6 to 26.
+    Monkey gets bored with item. Worry level is divided by 3 to 8
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 26 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 43.
+    Worry level is + by 6 to 49.
+    Monkey gets bored with item. Worry level is divided by 3 to 16
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 49 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 55.
+    Worry level is + by 6 to 61.
+    Monkey gets bored with item. Worry level is divided by 3 to 20
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 61 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 216.
+    Worry level is + by 6 to 222.
+    Monkey gets bored with item. Worry level is divided by 3 to 74
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 222 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 88.
+    Worry level is + by 3 to 91.
+    Monkey gets bored with item. Worry level is divided by 3 to 30
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 91 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 107.
+    Worry level is + by 3 to 110.
+    Monkey gets bored with item. Worry level is divided by 3 to 36
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 110 is thrown to monkey 1
+
+Round Result:  17
+Monkey 0: 162,60,33,131,8,16,20,74
+Monkey 1: 30,36
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 162.
+    Worry level is * by 19 to 3078.
+    Monkey gets bored with item. Worry level is divided by 3 to 1026
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 3078 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 60.
+    Worry level is * by 19 to 1140.
+    Monkey gets bored with item. Worry level is divided by 3 to 380
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1140 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 33.
+    Worry level is * by 19 to 627.
+    Monkey gets bored with item. Worry level is divided by 3 to 209
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 627 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 131.
+    Worry level is * by 19 to 2489.
+    Monkey gets bored with item. Worry level is divided by 3 to 829
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2489 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 8.
+    Worry level is * by 19 to 152.
+    Monkey gets bored with item. Worry level is divided by 3 to 50
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 152 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 16.
+    Worry level is * by 19 to 304.
+    Monkey gets bored with item. Worry level is divided by 3 to 101
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 304 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 20.
+    Worry level is * by 19 to 380.
+    Monkey gets bored with item. Worry level is divided by 3 to 126
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 380 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 74.
+    Worry level is * by 19 to 1406.
+    Monkey gets bored with item. Worry level is divided by 3 to 468
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1406 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 30.
+    Worry level is + by 6 to 36.
+    Monkey gets bored with item. Worry level is divided by 3 to 12
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 36 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 36.
+    Worry level is + by 6 to 42.
+    Monkey gets bored with item. Worry level is divided by 3 to 14
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 42 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 1026.
+    Worry level is + by 3 to 1029.
+    Monkey gets bored with item. Worry level is divided by 3 to 343
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 1029 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 380.
+    Worry level is + by 3 to 383.
+    Monkey gets bored with item. Worry level is divided by 3 to 127
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 383 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 209.
+    Worry level is + by 3 to 212.
+    Monkey gets bored with item. Worry level is divided by 3 to 70
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 212 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 829.
+    Worry level is + by 3 to 832.
+    Monkey gets bored with item. Worry level is divided by 3 to 277
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 832 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 50.
+    Worry level is + by 3 to 53.
+    Monkey gets bored with item. Worry level is divided by 3 to 17
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 53 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 101.
+    Worry level is + by 3 to 104.
+    Monkey gets bored with item. Worry level is divided by 3 to 34
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 104 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 126.
+    Worry level is + by 3 to 129.
+    Monkey gets bored with item. Worry level is divided by 3 to 43
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 129 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 468.
+    Worry level is + by 3 to 471.
+    Monkey gets bored with item. Worry level is divided by 3 to 157
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 471 is thrown to monkey 1
+
+Round Result:  18
+Monkey 0: 12,14,17,34
+Monkey 1: 343,127,70,277,43,157
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 12.
+    Worry level is * by 19 to 228.
+    Monkey gets bored with item. Worry level is divided by 3 to 76
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 228 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 14.
+    Worry level is * by 19 to 266.
+    Monkey gets bored with item. Worry level is divided by 3 to 88
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 266 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 17.
+    Worry level is * by 19 to 323.
+    Monkey gets bored with item. Worry level is divided by 3 to 107
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 323 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 34.
+    Worry level is * by 19 to 646.
+    Monkey gets bored with item. Worry level is divided by 3 to 215
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 646 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 343.
+    Worry level is + by 6 to 349.
+    Monkey gets bored with item. Worry level is divided by 3 to 116
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 349 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 127.
+    Worry level is + by 6 to 133.
+    Monkey gets bored with item. Worry level is divided by 3 to 44
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 133 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 70.
+    Worry level is + by 6 to 76.
+    Monkey gets bored with item. Worry level is divided by 3 to 25
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 76 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 277.
+    Worry level is + by 6 to 283.
+    Monkey gets bored with item. Worry level is divided by 3 to 94
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 283 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 43.
+    Worry level is + by 6 to 49.
+    Monkey gets bored with item. Worry level is divided by 3 to 16
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 49 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 157.
+    Worry level is + by 6 to 163.
+    Monkey gets bored with item. Worry level is divided by 3 to 54
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 163 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 76.
+    Worry level is + by 3 to 79.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 79 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 88.
+    Worry level is + by 3 to 91.
+    Monkey gets bored with item. Worry level is divided by 3 to 30
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 91 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 107.
+    Worry level is + by 3 to 110.
+    Monkey gets bored with item. Worry level is divided by 3 to 36
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 110 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 215.
+    Worry level is + by 3 to 218.
+    Monkey gets bored with item. Worry level is divided by 3 to 72
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 218 is thrown to monkey 1
+
+Round Result:  19
+Monkey 0: 116,44,25,94,16,54
+Monkey 1: 26,30,36,72
+Monkey 2: 
+Monkey 3: 
+Monkey 0:
+  Monkey inspects an item with a worry level of 116.
+    Worry level is * by 19 to 2204.
+    Monkey gets bored with item. Worry level is divided by 3 to 734
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 2204 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 44.
+    Worry level is * by 19 to 836.
+    Monkey gets bored with item. Worry level is divided by 3 to 278
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 836 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 25.
+    Worry level is * by 19 to 475.
+    Monkey gets bored with item. Worry level is divided by 3 to 158
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 475 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 94.
+    Worry level is * by 19 to 1786.
+    Monkey gets bored with item. Worry level is divided by 3 to 595
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1786 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 16.
+    Worry level is * by 19 to 304.
+    Monkey gets bored with item. Worry level is divided by 3 to 101
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 304 is thrown to monkey 3
+  Monkey inspects an item with a worry level of 54.
+    Worry level is * by 19 to 1026.
+    Monkey gets bored with item. Worry level is divided by 3 to 342
+    Cur Worry divisible by 23 -> False
+    Item with worry level of 1026 is thrown to monkey 3
+Monkey 1:
+  Monkey inspects an item with a worry level of 26.
+    Worry level is + by 6 to 32.
+    Monkey gets bored with item. Worry level is divided by 3 to 10
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 32 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 30.
+    Worry level is + by 6 to 36.
+    Monkey gets bored with item. Worry level is divided by 3 to 12
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 36 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 36.
+    Worry level is + by 6 to 42.
+    Monkey gets bored with item. Worry level is divided by 3 to 14
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 42 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 72.
+    Worry level is + by 6 to 78.
+    Monkey gets bored with item. Worry level is divided by 3 to 26
+    Cur Worry divisible by 19 -> False
+    Item with worry level of 78 is thrown to monkey 0
+Monkey 2:
+Monkey 3:
+  Monkey inspects an item with a worry level of 734.
+    Worry level is + by 3 to 737.
+    Monkey gets bored with item. Worry level is divided by 3 to 245
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 737 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 278.
+    Worry level is + by 3 to 281.
+    Monkey gets bored with item. Worry level is divided by 3 to 93
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 281 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 158.
+    Worry level is + by 3 to 161.
+    Monkey gets bored with item. Worry level is divided by 3 to 53
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 161 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 595.
+    Worry level is + by 3 to 598.
+    Monkey gets bored with item. Worry level is divided by 3 to 199
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 598 is thrown to monkey 1
+  Monkey inspects an item with a worry level of 101.
+    Worry level is + by 3 to 104.
+    Monkey gets bored with item. Worry level is divided by 3 to 34
+    Cur Worry divisible by 17 -> True
+    Item with worry level of 104 is thrown to monkey 0
+  Monkey inspects an item with a worry level of 342.
+    Worry level is + by 3 to 345.
+    Monkey gets bored with item. Worry level is divided by 3 to 115
+    Cur Worry divisible by 17 -> False
+    Item with worry level of 345 is thrown to monkey 1
+
+Round Result:  20
+Monkey 0: 10,12,14,26,34
+Monkey 1: 245,93,53,199,115
+Monkey 2: 
+Monkey 3: 

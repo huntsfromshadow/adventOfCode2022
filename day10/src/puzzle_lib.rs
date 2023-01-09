@@ -10,16 +10,60 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
 
     let mut cpu = Cpu::build(contents.lines());
+    let mut display = Display::build();
 
     while cpu.instruction_index < cpu.instructions.len() {
         cpu.tick();
+        display.tick(cpu.cycle_count, cpu.xreg);        
     }
 
-    dbg!(&cpu.watcher);
-    let x = cpu.watcher.iter().sum::<i32>();
-    println!("{}", x);
-
+    display.show();
     Ok(())
+}
+
+struct Display {
+    out_val: String,
+    work: Vec<String>,    
+}
+impl Display {
+    fn build() -> Display {
+        Display {
+            out_val: String::from(""),
+            work: Vec::new(),
+        }
+    }
+
+    fn tick(&mut self, cycle_cnt: i32, xreg: i32) {
+        
+        let mut conv_cycle = cycle_cnt % 40;
+        if(cycle_cnt >= 40) {
+            conv_cycle = conv_cycle + 1;
+        }
+
+        println!("cycle in: {}, conv cycle: {}, xreg: {}", cycle_cnt, conv_cycle, xreg);
+
+        if xreg - 1 == conv_cycle - 1
+            || xreg == conv_cycle - 1
+            || xreg +1 == conv_cycle - 1 {
+            self.work.push(String::from("#"))
+        }
+        else {
+            self.work.push(String::from("."))            
+        }
+    }   
+
+
+
+    fn show(&self) {
+        let brks: [usize; 6] = [40,40*2,40*3,40*4,40*5,40*6];
+        
+        for (i,x) in self.work.iter().enumerate() {
+            print!("{}", x);
+            if brks.contains(&i) {
+                print!("\n");
+            }
+        }
+    }
 }
 
 struct Cpu {
@@ -29,8 +73,7 @@ struct Cpu {
     instruction_cycle_count: i32,
     instruction_index: usize,
     is_instruction_loaded: bool,
-    loaded_instruction: Instruction,
-    watcher: Vec<i32>,
+    loaded_instruction: Instruction,    
 }
 impl Cpu {
     fn build(lines: Lines) -> Cpu {
@@ -47,7 +90,6 @@ impl Cpu {
             instruction_cycle_count: i1.cycle_time(),
             is_instruction_loaded: false,
             loaded_instruction: i1,
-            watcher: Vec::new()
         }
     }
 
@@ -68,40 +110,37 @@ impl Cpu {
     fn tick(&mut self) {        
         self.cycle_count = self.cycle_count + 1;
 
-        println!(
+        /*println!(
             "Starting Cycle {} -- X Reg {} -- Instr {:?} -- Instr Cycle {}",
             self.cycle_count, self.xreg, 
             self.loaded_instruction, self.instruction_cycle_count
-        );        
+        );*/        
 
         self.instruction_cycle_count = self.instruction_cycle_count - 1;
 
         if self.instruction_cycle_count == 0 {
             match self.loaded_instruction {
                 Instruction::NOOP => {
-                    println!("\tNOOP - Nothing to do");
+                    //println!("\tNOOP - Nothing to do");
                 }
                 Instruction::ADDX(val) => {
-                    println!("\tADDX {}", val);
+                    //println!("\tADDX {}", val);
                     self.xreg = self.xreg + val;
                 }
             }
             self.instruction_index = self.instruction_index + 1;
             self.is_instruction_loaded = false;
         }
-        println!("Ending Cycle {} -- X Reg {}", self.cycle_count, self.xreg);
+        //println!("Ending Cycle {} -- X Reg {}", self.cycle_count, self.xreg);
 
-        let tk = [20, 60, 100, 140, 180, 220];
-        if tk.contains(&self.cycle_count) {
-            println!("Recording on cnt {} val {}", self.cycle_count, self.xreg);
-            self.watcher.push(self.cycle_count * self.xreg);
-        }
+        
 
+        
         if self.is_instruction_loaded == false && self.instruction_index < self.instructions.len() {
-            println!(
+            /*println!(
                 "Need to Load Instruction: idx {} - inst {:?}",
                 self.instruction_index, self.instructions[self.instruction_index]
-            );
+            );*/
 
             self.loaded_instruction = self.instructions[self.instruction_index];
             self.instruction_cycle_count = self.loaded_instruction.cycle_time();            
