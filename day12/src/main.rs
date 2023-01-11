@@ -8,8 +8,8 @@ fn main() {
     let contents = fs::read_to_string(FILENAME).expect("Should have been able to read the file");
 
     let mut map = Map::build(contents);
-    map.print_map(None);
-    map.print_map(Some(true));
+    //map.print_map(None);
+    //map.print_map(Some(true));
 
     map.find_paths();
 
@@ -186,7 +186,7 @@ impl Map {
 
     fn take_step(&mut self, row: usize, col: usize, visit_path: &mut VecDeque<(usize, usize)>) {
         //println!("\tIn Take Step {} {} {:?}", row, col, visit_path);
-        println!("{}, {}", row, col);
+        //println!("{}, {}", row, col);
         // get current cell
         //println!("\t\tUp Check");
 
@@ -198,6 +198,7 @@ impl Map {
         match ur {
             Reason::END => {
                 //println!("\t\tGot End in Up Check Step Cnt: {}", visit_path.len());
+                println!("Found Path {}", visit_path.len());
                 self.visit_lengths.push(visit_path.len());
             }
             Reason::CanStep => {
