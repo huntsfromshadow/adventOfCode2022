@@ -7,7 +7,7 @@ fn main() {
 
     let contents = fs::read_to_string(FILENAME).expect("Should have been able to read the file");
 
-    let map = Map::build(contents);
+    let mut map = Map::build(contents);
     map.print_map(None);
     map.print_map(Some(true));
 
@@ -16,18 +16,18 @@ fn main() {
 
 #[derive(Debug)]
 enum Direc {
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT,
+    Up,
+    Down,
+    Left,
+    Right,
 }
 
 #[derive(Debug)]
 enum Reason {
-    CAN_STEP,
-    OFF_MAP,
-    ELEVATION,
-    VISITED_ALREADY,
+    CanStep,
+    OffMap,
+    Elevation,
+    VisitedAlready,
     END,
 }
 
@@ -64,96 +64,6 @@ impl MapCell {
             is_end,
         }
     }
-
-    fn can_step(&self, d: Direc, visit_list: &VecDeque<(usize, usize)>, map: &Map) -> Reason {
-        //println!("~~In can step {:?}, {}, {}", d, self.row, self.col);
-        match d {
-            Direc::UP => self.can_step_up(visit_list, map),
-            Direc::DOWN => self.can_step_down(visit_list, map),
-            Direc::LEFT => self.can_step_left(visit_list, map),
-            Direc::RIGHT => self.can_step_right(visit_list, map),
-        }
-    }
-
-    fn can_step_up(&self, visit_list: &VecDeque<(usize, usize)>, map: &Map) -> Reason {
-        //println!("~In can step up");
-        // up -> -1, 0
-        if self.row == 0 {
-            return Reason::OFF_MAP;
-        } else {
-            let nc = (self.row - 1, self.col);
-
-            return self.common_step(nc, &visit_list, &map);
-        }
-    }
-
-    fn can_step_down(&self, visit_list: &VecDeque<(usize, usize)>, map: &Map) -> Reason {
-        //println!("~In can step down");
-        // down -> +1, 0
-        if self.row == map.max_row - 1 {
-            return Reason::OFF_MAP;
-        } else {
-            let nc = (self.row + 1, self.col);
-            return self.common_step(nc, &visit_list, &map);
-        }
-    }
-
-    fn can_step_left(&self, visit_list: &VecDeque<(usize, usize)>, map: &Map) -> Reason {
-        //println!("~In can step left");
-        // left -> 0, -1
-        if self.col == 0 {
-            return Reason::OFF_MAP;
-        } else {
-            let nc = (self.row, self.col - 1);
-
-            //println!("~~In can step left {}, {}, {:?}", nc.0, nc.1, visit_list);
-            return self.common_step(nc, &visit_list, &map);
-        }
-    }
-
-    fn can_step_right(&self, visit_list: &VecDeque<(usize, usize)>, map: &Map) -> Reason {
-        //println!("~In can step right");
-        // right -> 0, +1
-        println!("{} {}", self.row, map.max_col - 1);
-        if self.row == map.max_col - 1 {
-            return Reason::OFF_MAP;
-        } else {
-            println!("goint right");
-            let nc = (self.row, self.col + 1);
-            return self.common_step(nc, &visit_list, &map);
-        }
-    }
-
-    fn common_step(
-        &self,
-        ncord: (usize, usize),
-        visit_list: &VecDeque<(usize, usize)>,
-        map: &Map,
-    ) -> Reason {
-       // println!("~In common step");
-
-        if visit_list.contains(&ncord) {
-            return Reason::VISITED_ALREADY;
-        } else {
-            let tcell = map.map.get(&ncord).unwrap();
-            if tcell.elev_value <= self.elev_value {
-                if tcell.row == map.end_cord.0 && tcell.col == map.end_cord.1 {
-                    println!("Found End at {},{}", tcell.row, tcell.col);
-                    return Reason::END;
-                } else {
-                    return Reason::CAN_STEP;
-                }
-            } else if tcell.elev_value - 1 == self.elev_value {
-                if tcell.row == map.end_cord.0 && tcell.col == map.end_cord.1 {
-                    return Reason::END;
-                } else {
-                    return Reason::CAN_STEP;
-                }
-            } else {
-                return Reason::ELEVATION;
-            }
-        }
-    }
 }
 
 #[derive(Debug)]
@@ -163,6 +73,7 @@ struct Map {
     end_cord: (usize, usize),
     max_row: usize,
     max_col: usize,
+    visit_lengths: Vec<usize>,
 }
 impl Map {
     fn build(map_string: String) -> Map {
@@ -174,6 +85,7 @@ impl Map {
             end_cord,
             max_row, // 1 based
             max_col, // 1 based
+            visit_lengths: Vec::new(),
         }
     }
 
@@ -261,110 +173,195 @@ impl Map {
         print!("\n");
     }
 
-    fn find_paths(&self) {
+    fn find_paths(&mut self) {
         let (s_r, s_c) = self.start_cord;
         let mut vec_visit: VecDeque<(usize, usize)> = VecDeque::new();
 
+        println!("Starting Core Find Paths {} {} {:?}", s_r, s_c, vec_visit);
         self.take_step(s_r, s_c, &mut vec_visit);
     }
 
-    fn take_step(&self, row: usize, col: usize, visit_path: &mut VecDeque<(usize, usize)>) -> bool {
+    fn take_step(&mut self, row: usize, col: usize, visit_path: &mut VecDeque<(usize, usize)>) {
+        println!("\tIn Take Step {} {} {:?}", row, col, visit_path);
         // get current cell
-        let cur_cell = self.map.get(&(row, col)).unwrap();
-
+        println!("\t\tUp Check");
         // Check up
-        let ur = cur_cell.can_step(Direc::UP, &visit_path, &self);
+        let ur = self.can_step(Direc::Up, row, col, &visit_path);
+        println!("\t\tUp Check Result -- {:?}", ur);
         match ur {
             Reason::END => {
-                return true;
+                println!("\t\tGot End in Up Check Step Cnt: {}", visit_path.len());
+                self.visit_lengths.push(visit_path.len());
             }
-            Reason::CAN_STEP => {
+            Reason::CanStep => {
                 // Up is -1, 0
                 visit_path.push_back((row, col));
-                println!("Stepping Up from {}, {}. Visit List {:?}", row, col, visit_path);
-                let r = self.take_step(row - 1, col, visit_path);
-                if !r {
-                    //Remove the last step before we try other paths
-                    visit_path.pop_back();
-                }
+                println!(
+                    "\t\tStepping Up from {}, {}. Visit List {:?}",
+                    row, col, visit_path
+                );
+                self.take_step(row - 1, col, visit_path);
             }
-            _ => {
-                //We can't step print why
-                //println!("Can't step from {}, {} UP -> {:?}", row, col, ur)
-            }
+            _ => {}
         }
+        // Not matter what pop the result and keep walking as we need to find all paths
+        visit_path.pop_back();
+
 
         // Check left
-        let lr = cur_cell.can_step(Direc::LEFT, &visit_path, &self);
+        println!("\t\tLeft Check");
+        let lr = self.can_step(Direc::Left, row, col, &visit_path);
+        println!("\t\tLeft Check Result -- {:?}", lr);
         match lr {
             Reason::END => {
-                return true;
+                println!("\t\tGot End in Left Check Step Cnt: {}", visit_path.len());
+                self.visit_lengths.push(visit_path.len());
             }
-            Reason::CAN_STEP => {
+            Reason::CanStep => {
                 // left is 0, -1
                 visit_path.push_back((row, col));
-                println!("Stepping Left from {}, {}. Visit List {:?}", row, col, visit_path);
-                let r = self.take_step(row, col - 1, visit_path);
-                if !r {
-                    //Remove the last step before we try other paths
-                    visit_path.pop_back();
-                }
+                println!(
+                    "\t\tStepping Left from {}, {}. Visit List {:?}",
+                    row, col, visit_path
+                );
+                self.take_step(row, col - 1, visit_path);
             }
-            _ => {
-                //We can't step print why
-                //println!("Can't step from {}, {} LEFT -> {:?}", row, col, ur)
-            }
+            _ => {}
         }
+        // Not matter what pop the result and keep walking as we need to find all paths
+        visit_path.pop_back();
+
 
         // Check down
-        let dr = cur_cell.can_step(Direc::DOWN, &visit_path, &self);
+        println!("\t\tDown Check");
+        let dr = self.can_step(Direc::Down, row, col, &visit_path);
+        println!("\t\tDown Check Result -- {:?}", dr);
         match dr {
             Reason::END => {
-                return true;
+                println!("\t\tGot End in Down Check Step Cnt: {}", visit_path.len());
+                self.visit_lengths.push(visit_path.len());
             }
-            Reason::CAN_STEP => {
+            Reason::CanStep => {
                 // Up is +1, 0
                 visit_path.push_back((row, col));
-                println!("Stepping down from {}, {}. Visit List {:?}", row, col, visit_path);
-                let r = self.take_step(row + 1, col, visit_path);
-                if !r {
-                    //Remove the last step before we try other paths
-                    visit_path.pop_back();
-                }
+                println!(
+                    "\t\tStepping Down from {}, {}. Visit List {:?}",
+                    row, col, visit_path
+                );
+                self.take_step(row + 1, col, visit_path);
             }
-            _ => {
-                //We can't step print why
-                //println!("Can't step from {}, {} DOWN -> {:?}", row, col, ur)
-            }
+            _ => {}
         }
+        // Not matter what pop the result and keep walking as we need to find all paths
+        visit_path.pop_back();
 
-        println!("!right? {}, {}", row, col);
+
+        println!("\t\tRight Check");
         // Check right
-        let rr = cur_cell.can_step(Direc::RIGHT, &visit_path, &self);
-        match ur {
+        let rr = self.can_step(Direc::Right, row, col, &visit_path);
+        println!("\t\tRight Check Result -- {:?}", rr);
+        match rr {
             Reason::END => {
-                return true;
+                println!("\t\tGot End in Right Check Step Cnt: {}", visit_path.len());
+                self.visit_lengths.push(visit_path.len());
             }
-            Reason::CAN_STEP => {
+            Reason::CanStep => {
                 // Right is 0, +1
                 visit_path.push_back((row, col));
-                println!("Stepping right from {}, {}. Visit List {:?}", row, col, visit_path);
-                let r = self.take_step(row, col + 1, visit_path);
-                if !r {
-                    //Remove the last step before we try other paths
-                    visit_path.pop_back();
-                }
+                println!(
+                    "\t\tStepping Right from {}, {}. Visit List {:?}",
+                    row, col, visit_path
+                );
+                self.take_step(row, col + 1, visit_path);
             }
-            _ => {
-                //We can't step print why
-                println!("Can't step from {}, {} RIGHT -> {:?}", row, col, ur)
+            _ => {}
+        }
+        // Not matter what pop the result and keep walking as we need to find all paths
+        visit_path.pop_back();
+    }
+
+    fn can_step(&self, d: Direc, start_r: usize, start_c: usize, visit_list: &VecDeque<(usize, usize)>) -> Reason {
+        match d {
+            Direc::Up => self.can_step_up(start_r, start_c, visit_list),
+            Direc::Down => self.can_step_down(start_r, start_c, visit_list),
+            Direc::Left => self.can_step_left(start_r, start_c, visit_list),
+            Direc::Right => self.can_step_right(start_r, start_c, visit_list)
+        }
+    }
+
+    fn can_step_up(&self, start_r: usize, start_c: usize, visit_list: &VecDeque<(usize, usize)>) -> Reason {
+        // up -> -1, 0
+        if start_r == 0 {
+            return Reason::OffMap;
+        } else {
+            let sc = (start_r, start_c);
+            let nc = (start_r - 1, start_c);
+
+            return self.common_step(sc, nc, &visit_list);
+        }
+    }
+
+    fn can_step_down(&self, start_r: usize, start_c: usize, visit_list: &VecDeque<(usize, usize)>) -> Reason {
+        // down -> +1, 0
+        if start_r == self.max_row - 1 {
+            return Reason::OffMap;
+        } else {
+            let sc = (start_r, start_c);
+            let tc = (start_r + 1, start_c);
+            return self.common_step(sc, tc, &visit_list);
+        }
+    }
+
+    fn can_step_left(&self, start_r: usize, start_c: usize, visit_list: &VecDeque<(usize, usize)>) -> Reason {
+        // left -> 0, -1
+        if start_c == 0 {
+            return Reason::OffMap;
+        } else {
+            let sc = (start_r, start_c);
+            let tc = (start_r, start_c - 1);
+            return self.common_step(sc, tc, &visit_list);
+        }
+    }
+
+    fn can_step_right(&self, start_r: usize, start_c: usize, visit_list: &VecDeque<(usize, usize)>) -> Reason {
+        // right -> 0, +1
+        if start_c == self.max_col - 1 {
+            return Reason::OffMap;
+        } else {
+            let sc = (start_r, start_c);
+            let tc = (start_r, start_c + 1);
+            return self.common_step(sc, tc, &visit_list);
+        }
+    }
+
+    fn common_step(
+        &self,
+        scord: (usize, usize),
+        tcord: (usize, usize),
+        visit_list: &VecDeque<(usize, usize)>,
+    ) -> Reason {
+        if visit_list.contains(&tcord) {
+            return Reason::VisitedAlready;
+        } else {
+            let scell = self.map.get(&scord).unwrap();
+            let tcell = self.map.get(&tcord).unwrap();
+            if tcell.elev_value <= scell.elev_value {
+                if tcell.row == self.end_cord.0 && tcell.col == self.end_cord.1 {
+                    println!("Found End at {},{}", tcell.row, tcell.col);
+                    return Reason::END;
+                } else {
+                    return Reason::CanStep;
+                }
+            } else if tcell.elev_value - 1 == scell.elev_value {
+                if tcell.row == self.end_cord.0 && tcell.col == self.end_cord.1 {
+                    return Reason::END;
+                } else {
+                    return Reason::CanStep;
+                }
+            } else {
+                return Reason::Elevation;
             }
         }
-
-        // If we made it here and we haven't found the end then we know it's a dead path
-        // return false so the recursion will try another route
-        println!("Ret false");
-        false
     }
 }
 
