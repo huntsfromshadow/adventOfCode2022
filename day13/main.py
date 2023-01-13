@@ -2,67 +2,16 @@ import copy
 import json
 from typing import Optional
 
-def run_compare(pair) -> bool:
-    left = pair[0]
-    right = pair[1]
-
-    print(f"- Compare {left} vs {right}")
-
-    idx = 0 # Start Index
-    while True:
-        left_v = left[idx]
-        right_v = right[idx]
-
-        # Are both Int?
-        if type(left_v) == int and type(right_v) == int:
-            print(f"\t- Compare {left_v} vs {right_v}")
-            if left_v < right_v:
-                print(f"\t\t- Left side is smaller, so inputs are in the right order")
-                return True
-            elif left_v > right_v:
-                print(f"\t\t- Right side is smaller, so inputs are not in the right orde")
-                return False
-            else:
-                # Move Index ahead and let loop operate
-                idx = idx + 1        
-        elif type(left_v) == list and type(right_v) == list:
-            # Are both lists?
-            v = list_compare(left_v, right_v)
-            if v == None:
-                idx = idx + 1
-            else:
-                return v
-        else:
-            # One Side is list the other isn't
-            (lconv, rconv) = convert(left_v, right_v)
-
-            # Both sides are now lists
-            v = list_compare(lconv, rconv)
-            if v == None:
-                idx = idx + 1
-            else:
-                return v
-
-def convert(left_v, right_v):
-    if type(left_v) == int:
-        c = [left_v]
-        print(f"- Mixed Types; convert left to {c} and retry comparison")
-        return (c, right_v)
-    else:
-        c = [right_v]
-        print(f"- Mixed Types; convert right to {c} and retry comparison")
-        return (left_v, c)
-
 def r_comp(left, right) -> Optional[bool]:
 
-    print(f"Rcomp starting {left}, {right}")
+    #print(f"Rcomp starting {left}, {right}")
 
     while True:
-        print(f"Loop Start left: {left}")
-        print(f"Loop start right: {right}")
+        #print(f"Loop Start left: {left}")
+        #print(f"Loop start right: {right}")
         # check for empty conditions
         if type(left) == int and type(right) == int:
-            print(f"Compare {left} vs {right}")
+            #print(f"Compare {left} vs {right}")
             if left == right:
                 return None
             elif left < right:
@@ -104,42 +53,80 @@ def r_comp(left, right) -> Optional[bool]:
                 res = r_comp(left_elem, right_elem)
 
                 if res == None:
-                    print("Move on")
+                    #print("Move on")
                     continue    # Continue on
                 else:
                     return res
 
-
-
 ########################################
-
-
-
-
-
 
 f = open("input.txt")
 iput = f.read().splitlines()
-pairs = []
-wrk = []
+#pairs = []
+#wrk = []
+data = []
 for i in iput:
-
     if i != "":
-        wrk.append(json.loads(i))
+        data.append(json.loads(i))
 
-    if len(wrk) == 2:
-        pairs.append(wrk)
-        wrk = []
+data.append([[2]])
+data.append([[6]])
 
-idx_total = 0
-for idx, p in enumerate(pairs):
-    print(f"== Pair {idx} ==")
-    r = r_comp( copy.deepcopy(p[0]), copy.deepcopy(p[1]))
-    print(f"\tResult: {r}")
+# Old fashioned slow sort
+idx = 0
+did_swap = False
+while True:
+    start_idx = idx
+    target_idx = idx + 1
 
-    if r:
-        idx_total = idx_total + idx + 1
+    print(f"{start_idx} -> {target_idx}")
 
-print(f"\nFinal Result: {idx_total}")
+
+    result = r_comp(copy.deepcopy(data[start_idx]), copy.deepcopy(data[target_idx]))
+
+    print(f"\tResult: {result}")
+
+    if result == False:
+        did_swap = True
+        tmp = data[start_idx]
+        data[start_idx] = data[target_idx]
+        data[target_idx] = tmp
+
+    idx = idx + 1
+
+    if(idx == len(data)-1):
+        print(f"Run -> {data}")
+        if did_swap == True:
+            idx = 0
+            did_swap = False
+        else:
+            break
+
+divider1 = None
+divider2 = None
+for idx, l in enumerate(data):
+    print(l)
+
+    if l == [[2]]:
+        divider1 = idx + 1
+
+    if l == [[6]]:
+        divider2 = idx + 1
+
+print(divider1 * divider2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
