@@ -3,7 +3,7 @@ from typing import List, Optional, Tuple
 import re
 import math
 
-TOTAL_ROUNDS = 20
+TOTAL_ROUNDS = 1000
 
 class Carload:
     def __init__(self, lines: List[str]):
@@ -20,34 +20,33 @@ class Carload:
                 grp = []
                 self.monkies.append(m)
 
-        m = Monkey.from_list(grp, self)
-        self.monkies.append(m)
+        #m = Monkey.from_list(grp, self)
+        #self.monkies.append(m)
 
-        print(len(self.monkies))
+        #print(len(self.monkies))
         
 
     def execute_round(self, round_num: int):
         for m in self.monkies: 
-            print(f"{m.full_name()}:")
+            #print(f"{m.full_name()}:")
 
             for _ in range(len(m.items)):
                 m_res = m.run_monkey()
                 wp = (m.operation[0], m.operation[1])
                 out = f"  Monkey inspects an item with a worry level of {m_res[0]}.\n" + \
                     f"    Worry level is {wp[0]} by {wp[1]} to {m_res[1]}.\n" + \
-                    f"    Monkey gets bored with item. Worry level is divided by 3 to {m_res[2]}\n" + \
                     f"    Cur Worry divisible by {m.test} -> {m_res[3]}\n" + \
                     f"    Item with worry level of {m_res[1]} is thrown to monkey {m_res[4]}"
-                print(out)
+                #print(out)
 
-        print("\nRound Result: ", round_num)
-        for m in self.monkies:            
-            print(m.full_name() + ": " + ','.join(str(x) for x in m.items))
+        #print("\nRound Result: ", round_num)
+        #for m in self.monkies:            
+        #    print(m.full_name() + ": " + ','.join(str(x) for x in m.items))
 
 
     def throw_item_to(self, item: int, monkey_id: str):
 
-        print(f"Throw item {item} to {monkey_id}")        
+        #print(f"Throw item {item} to {monkey_id}")        
         self.monkies[monkey_id].items.append(item)
 
     def final_result(self):
@@ -103,7 +102,8 @@ class Monkey:
         else:
             starting_worry_value = self.items[0]
             new_worry_level = self.calc_new_worry_level()
-            bored_worry_level = math.floor(new_worry_level / 3)
+            #bored_worry_level = math.floor(new_worry_level / 3)
+            bored_worry_level = new_worry_level
 
             if bored_worry_level % self.test == 0:
                 test_result = True
@@ -140,13 +140,14 @@ class Monkey:
 
 
 def run():
-    FILE = "input.txt"
+    FILE = "short_input.txt"
     f = open(FILE, "r")
     lines = f.read().splitlines()
 
     carload = Carload(lines)
 
-    for i in range(TOTAL_ROUNDS):
+    for i in range(500):
+        print(i)
         carload.execute_round(i+1)
 
     carload.final_result()
