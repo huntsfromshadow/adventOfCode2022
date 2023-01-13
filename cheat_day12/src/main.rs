@@ -1,4 +1,4 @@
-// FROM https://github.com/stephenglynch/advent-of-code-2022/blob/main/day12a/src/main.rs
+// From: https://raw.githubusercontent.com/stephenglynch/advent-of-code-2022/main/day12b/src/main.rs
 
 use std::{fs, vec};
 use std::collections::HashMap;
@@ -30,8 +30,8 @@ fn parse(text: &str) -> Region {
             let height = *conversion_table.get(&c).unwrap();
             // Assign start and end
             match c {
-                'S' => region.start = (row_i, col_i),
-                'E' => region.end = (row_i, col_i),
+                'S' => region.end = (row_i, col_i),
+                'E' => region.start = (row_i, col_i),
                 _ => ()
             }
             region.memory.push(height);
@@ -68,7 +68,7 @@ fn neighbours(region: &Region, node: (usize, usize)) -> Vec<(usize, usize)> {
         // ... and matching allowed steps
         .filter(|(r,c)| {
             let h = get_height(&region, *r, *c);
-            h >= 0 && h <= centre + 1 // allowed step range
+            h >= centre - 1  // allowed step range
         })
         .collect()
 }
@@ -85,8 +85,7 @@ fn pop_next_shortest(region: &Region, unvisited: &mut Vec<(usize, usize)>, dist:
     return node;
 }
 
-fn distance(region: Region) -> Option<u32> {
-
+fn distance(region: &Region) -> Vec<u32> {
     let num_rows = region.num_rows;
     let num_cols = region.num_cols;
     let mut dist = vec![u32::MAX; num_rows * num_cols];
@@ -107,30 +106,28 @@ fn distance(region: Region) -> Option<u32> {
         let current = pop_next_shortest(&region, &mut unvisited, &dist);
         let (current_row, current_col) = current;
         let current_dist = dist[current_row * num_cols + current_col];
-
-        // Check if we're done
-        if current == region.end {
-            return Some(current_dist);
-        }
        
         // Remove current from unvisted
         for (nb_row, nb_col) in neighbours(&region, current) {
-            let nb_dist = dist[nb_row * num_cols + nb_col];
-            if current_dist.saturating_add(1) < nb_dist{
-                dist[nb_row * num_cols + nb_col] = current_dist.saturating_add(1);
+            let nb_pos = nb_row * num_cols + nb_col;
+            let nb_dist = dist[nb_pos];
+            if current_dist.saturating_add(1) < nb_dist {
+                dist[nb_pos] = current_dist.saturating_add(1);
             }
         }
     }
 
-    return None
+    return dist
 }
 
 fn main() {
     let contents = fs::read_to_string("input.txt").unwrap();
     let region = parse(&contents);
-    if let Some(min_dist) = distance(region) {
-        println!("answer = {}", min_dist);
-    } else {
-        println!("not path found")
-    }   
+    let dist = distance(&region);
+    let answer = region.memory.iter()
+        .enumerate().filter(|(_, c)| **c == 0 || **c == 0)
+        .map(|(i, _)| (i, dist[i]))
+        .min_by_key(|(_, d)| *d)
+        .unwrap().1;
+    println!("answer: {}", answer);
 }
