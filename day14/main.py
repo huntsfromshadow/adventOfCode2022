@@ -115,6 +115,8 @@ class Cave:
 
     sim_finished = False
 
+    txt_shift = 0
+
 
     def add_wall(self, wall: Wall):
         self.walls.append(wall)
@@ -178,8 +180,8 @@ class Cave:
         
         if len(self.sands) > 0:
             s = self.sands[-1]
-            screen.print_at(self.target, 80, 9)
-            screen.print_at(s.pos, 80, 10)
+            screen.print_at(self.target, 80, 9 + self.txt_shift)
+            screen.print_at(s.pos, 80, 10 + self.txt_shift)
 
         if self.sim_finished:
             screen.print_at("Sim Finished", 100, 1)
@@ -241,6 +243,14 @@ def demo(screen=None):
         if ev in (ord('Q'), ord('q')):
             return
         
+        if ev == Screen.KEY_DOWN:
+            screen.scroll(1)
+            cave.txt_shift = cave.txt_shift + 1
+
+        if ev == Screen.KEY_UP:
+            screen.scroll(-1)
+            cave.txt_shift = cave.txt_shift - 1
+
         #if ev == 32:
         cave.step()
    
