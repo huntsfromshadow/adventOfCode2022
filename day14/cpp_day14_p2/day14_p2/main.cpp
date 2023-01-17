@@ -191,8 +191,8 @@ void parse_file()
     }
   }
 
-  //floor_y = floor_y + 2;
-  floor_y = floor_y + 1;
+  floor_y = floor_y + 2;
+  //floor_y = floor_y + 1;
 }
 
 bool can_move_down(Point p)
@@ -200,7 +200,16 @@ bool can_move_down(Point p)
   Point z;
   z = p;
   z.y = z.y + 1;
-  return !point_vec_contains(z);
+
+  // First check if it is hitting floor
+  if( z.y == floor_y ) 
+  {
+    return false;
+  }
+  else 
+  {
+    return !point_vec_contains(z);
+  }
 }
 
 bool can_move_down_left(Point p)
@@ -209,7 +218,16 @@ bool can_move_down_left(Point p)
   z = p;
   z.y = z.y + 1;
   z.x = z.x - 1;
-  return !point_vec_contains(z);
+
+  // First check if it is hitting floor
+  if( z.y == floor_y ) 
+  {
+    return false;
+  }
+  else 
+  {
+    return !point_vec_contains(z);
+  }
 }
 
 bool can_move_down_right(Point p)
@@ -218,7 +236,16 @@ bool can_move_down_right(Point p)
   z = p;
   z.y = z.y + 1;
   z.x = z.x + 1;
-  return !point_vec_contains(z);
+
+  // First check if it is hitting floor
+  if( z.y == floor_y ) 
+  {
+    return false;
+  }
+  else 
+  {
+    return !point_vec_contains(z);
+  }
 }
 
 void run_simulation()
@@ -245,13 +272,6 @@ void run_simulation()
       sand_cord.y = sand_cord.y + 1;
       std::cout << "Moved sand down (" << sand_cord.x << "," <<
         sand_cord.y << ")\n";
-
-      // Check for end
-      if(sand_cord.y == floor_y)
-      {
-        std::cout<< "Hit abyss -- sand_count " << sand_count - 1 << "\n";
-        return;
-      }
     }
     else
     {
@@ -274,8 +294,16 @@ void run_simulation()
         }
         else {
           std::cout << "Blocked - Stopping at (" << sand_cord.x << "," << sand_cord.y << ")\n";
-          points.push_back(sand_cord);
-          sand_in_motion = false;
+
+          if( sand_cord.x == 500 && sand_cord.y == 0)
+          {
+            std::cout << "Sand At 500,0. -- " << sand_count << "\n";
+            return;
+          } 
+          else {
+            points.push_back(sand_cord);
+            sand_in_motion = false;
+          }
         }
       }
     }
