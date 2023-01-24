@@ -1,189 +1,151 @@
-from itertools import repeat
+from typing import List
 
-INPUT = "short-input.txt"
+blocks = [
+    [["@","@","@","@"]], # Horizontal
+    [[".", "@", "."], ["@", "@", "@"], [".", "@", "."]], # Plus
+    [[".", ".", "@"], [".", ".", "@"], ["@", "@", "@"]], # Corner
+    [["@"],["@"],["@"],["@"]], # Vertical
+    [["@", "@"], ["@", "@"]] ] # Square
+blocks_idx = 0
 
-class JetInstructions:
-    next_i = None
-    inst = None
+instr = []
+instr_idx = 0
+file = open("short-input.txt")
+txt = file.read()
+txt = txt.replace("\n", "")
+for i in txt:
+    instr.append(i)
 
-    def __init__(self, filename):
-        f = open(INPUT)
-        raw = f.read()
+#######################
 
-        self.next_i = 0
-        self.inst = []
-        raw.replace('\n','')
-        for c in raw:
-            self.inst.append(c)
-
-    def get_next_blast(self):
-        ret = self.inst[self.next_i]
-        self.next_i = self.next_i + 1
-        if self.next_i == len(self.inst):
-            self.next_i = 0
-        return ret
-
+# Cords are Y,X grid with 0,0 at bottom left
 class Grid:
-    """
-    -1 - Stopped
-    0 - Empty
-    1 - Moving
-    """
-    cells = {}  # 0,0 Bottom, Left -> +y Up, +x RIGHT '(y,x)
-    jetins = None
-    last_row = -1
+    data = []
 
-    def __init__(self, jetins):
-        self.jetins = jetins
+    def __init__(self):
+        # Set up the first 3 rows
+        self.new_empty_row()
+        self.new_empty_row()
+        self.new_empty_row()
+
+    def get(self, row: int, col: int) -> str:
+        return self.data[row][col]
+
+    def put(self, row: int, col: int, val: str):
+        if row >= len(self.data):
+            raise Exception("Row out of bounds")
+        else:
+            self.data[row][col] = val
+
+    def new_empty_row(self):
+        self.data.append( ["."] * 7 )
 
     def show_grid(self):
-        print(self.last_row)
+        nc = self.data[::-1]
+        for row in nc:
+            for col in row:
+                print(col, end="")
+            print("")
 
-        cnt = self.last_row
-        for y in range(0, self.last_row + 1):            
-            ls = ""
-            for x in range(0, 7):
-                c = self.cells[(y,x)]
-                if c == 0:
-                    ls = ls + " . "
-                elif c == 1:
-                    ls = ls + " @ "
-                else:
-                    ls = ls + " # "
-
-            print( f"{cnt} -- |", ls, "|")
-            cnt = cnt - 1
-
-        
-    def place_block(self, block):
-        # Add 3 empty rows to the hash
-        self.last_row = self.last_row + 1
-        for y in range( self.last_row, self.last_row + 3):
-            for x in range(0, 7):
-                print("Adding ", (y,x))
-                self.cells[ (y, x) ] = 0
-        self.last_row = self.last_row + 2
-
-        self.show_grid()
-        
-        # Now we place the bottom of the block and leave the rest in storage for later
-        block.reverse()
-        self.last_row = self.last_row + 1
-        for y in range(self.last_row, self.last_row + len(block)):
-            # Put in the first two empty on left
-            self.cells[(y,0)] = 0
-            self.cells[(y,1)] = 0
-
-            br = block[y]
-            for x in range(2, 7):                
-                if x >= len(br):
-                    self.cells[(y,x)] = 0
-                else:
-                    self.cells[(y,x)] = 1
+    def get_last_row(self) -> int:
+        return len(self.data) - 1
 
 
-            
-    def blast_air(self):
-        return
-        # get next instr
-        next = self.jetins.get_next_blast()
+def place_block(grid: Grid, block: List[List]):
+    n_blk = block[::-1]
 
-        for y in range(0, len(self.rows)):
-            r = self.rows[y]
-
-            if max(r) == 0:
-                # Skipping as it's either all 0 or all 0 and -1
-                print("Skipping ", y)
-                pass
-            else:
-                # So their is actually a block in here
-                if next == ">":
-                    self.shift_right(y)                            
-                    #self.show_grid()
-                else:
-                    raise Exception("Not here yet")
-
+    for row in n_blk:
+        nrow = ['.', '.'] + row + (['.'] * (7 - 2 - len(row)))
+        grid.data.append(nrow)        
     
-    def step_down(self):
-        pass
 
-    
-    
-    def shift_right(self, y):
-        # Grab row
-        r = self.rows[y]
-
-        # First see if it will hit wall if so we cant do anything anyway
-        if r[len(r) - 1] == 1:
-            # So we have a space in the far right field so we can't move anyway
-            return
+def can_move_right(grid: Grid, row_idx: int, col_idx: int) -> bool:
+    # First can we actually move right from the col_idx?
+    if col_idx == 6:
+        return False
+    else:
+        v = grid.get(row_idx, col_idx + 1)
+        if v == "." or v == "@": 
+            return True
         else:
-            if min(r) == 0 and max(r) == 1:
-            # Yep just an block row
-            # Is their room to move it (will it hit wall)
-                wrk = r[:]
-                self.rows[y] = [wrk.pop(-1)] + wrk
-                return
-            else:
-                raise Exception("Come back to fix")
-        
+            return False
 
-        
 
-class Blocks:
-    def __init__(self):
-        self.next_block = 2
-    
-    def get_next_block(self):
-        if self.next_block == 0:
-            self.next_block = self.next_block + 1
-            return [[1,1,1,1]]
-        
-        elif self.next_block == 1:
-            self.next_block = self.next_block + 1
-            return [
-                [0, 1, 0],
-                [1, 1, 1],
-                [0, 1, 0]]
-            
-        elif self.next_block == 2:
-            self.next_block = self.next_block + 1
-            return [
-                [0, 0, 1],
-                [0, 0, 1],
-                [1, 1, 1]]
-        
-        elif self.next_block == 3:
-            self.next_block = self.next_block + 1
-            return [
-                [1],
-                [1],
-                [1],
-                [1]]
-
-        elif self.next_block == 4:
-            self.next_block = 0
-            return [
-                [1, 1],
-                [1, 1]]
-        
+def can_move_down(grid: Grid, row_idx: int, col_idx: int) -> bool:
+    if row_idx == 0:
+        return False
+    else:
+        v = grid.get(row_idx - 1, col_idx)
+        if v == "." or v == "@":
+            return True
         else:
-            print("I have no idea on what block")
+            return False
 
 
-##### Main
+def shift_block_right(grid: Grid):
+    for row_idx in range(0, len(grid.data)):
+        for col_idx in range(6, -1, -1):
+            v = grid.get(row_idx, col_idx)
+            if v == "@":
+                grid.put(row_idx, col_idx, ".")
+                grid.put(row_idx, col_idx+1, "@")
 
-jetins = JetInstructions(INPUT)
-grid = Grid(jetins)
-blocks = Blocks()
 
-# Logic
-next_block =  blocks.get_next_block()
-grid.place_block(next_block)
+def shift_block_down(grid: Grid):
+    pass
+
+def air_blast(grid: Grid, ins: str) -> bool:
+    # Walk down the columns
+    if ins == ">":
+        for col_idx in range(6, -1, -1):
+            for row_idx in range(len(grid.data)-1, -1, -1):                
+                v = grid.get(row_idx, col_idx)
+                print(row_idx, "--", col_idx, " --> ", v)
+
+                if v == "@":
+                    # Okay it's a moving block so we need to check to the right
+                    if can_move_right(grid, row_idx, col_idx) == False:
+                        # Nope return
+                        return False
+         
+        # If we made it here we can do the move
+        shift_block_right(grid)
+        return True
+
+    else:
+        raise Exception("Move Left")
+
+
+def move_down(grid: Grid):
+    handle_move_down = False
+    for row_idx in range(0, len(grid.data)):
+        if "@" in grid[row_idx]:
+            # Unless their is a @ we just move on
+            for col_idx in range(0, 7):
+                v = grid.get(row_idx, col_idx)
+                if v == "@":
+                    # Okay it's a brick so can it move down
+                    if can_move_down(row_idx, col_idx) == False:
+                        handle_move_down = True
+    
+                
+
+
+
+
+###################
+
+
+# Start by putting in the bottom 3 rows
+grid = Grid()
+
+place_block(grid, blocks[blocks_idx])
+blocks_idx = blocks_idx + 1
 grid.show_grid()
 
-#grid.blast_air()
-#grid.step_down()
+air_blast(grid, instr[instr_idx])
+instr_idx = instr_idx + 1
+grid.show_grid()
 
-
-
+move_down(grid)
+grid.show_grid()
